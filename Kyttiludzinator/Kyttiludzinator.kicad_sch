@@ -1,0 +1,71 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid ae6948d5-1dc0-45d1-b607-44e44d4b2b44)
+
+  (paper "A4")
+
+  (title_block
+    (title "Carte éléctronique Ludzinator")
+    (date "2023-09-19")
+    (rev "GILLES Baptiste")
+  )
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 149.86 36.83) (size 48.26 49.53) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 29ef3ad0-9a27-4625-86ca-e3237d209475)
+    (property "Sheetname" "Driver_moteur" (at 149.86 36.1184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "MoteurProjet_sch.kicad_sch" (at 149.86 86.9446 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 26.67 33.02) (size 46.99 52.07) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 71528f02-33a0-49c9-abcb-9007a031c95a)
+    (property "Sheetname" "STM32G070RBTx" (at 26.67 32.3084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "STM32G070RBTx.kicad_sch" (at 26.67 85.6746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 85.09 36.83) (size 41.91 48.26) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid a7615b68-eaec-40b2-84b5-a1a21f69b043)
+    (property "Sheetname" "Charger" (at 85.09 36.1184 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Charger.kicad_sch" (at 85.09 85.6746 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "3"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
