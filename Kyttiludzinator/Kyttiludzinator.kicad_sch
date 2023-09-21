@@ -65,6 +65,23 @@
     )
   )
 
+  (sheet (at 62.23 123.19) (size 53.34 30.48) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid f36161ad-3a1f-4728-bb96-7d7ecbaa85c4)
+    (property "Sheetname" "Moustache" (at 62.23 122.4784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "Moustache.kicad_sch" (at 62.23 154.2546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "5"))
+      )
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )
