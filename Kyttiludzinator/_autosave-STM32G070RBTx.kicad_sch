@@ -984,6 +984,7 @@
     )
   )
 
+
   (junction (at 48.26 173.99) (diameter 0) (color 0 0 0 0)
     (uuid 181289f8-a649-43b7-82c2-cb385cfa8afd)
   )
@@ -1796,7 +1797,7 @@
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
   )
-  (global_label "Moustache_1" (shape input) (at 71.12 39.37 90) (fields_autoplaced)
+  (global_label "Moustache_4" (shape input) (at 71.12 39.37 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left))
     (uuid c83c8738-0ba1-4a67-8aea-c579f0801f6a)
     (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 71.12 23.8803 90)
