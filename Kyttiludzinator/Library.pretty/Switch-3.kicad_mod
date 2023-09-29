@@ -16,6 +16,6 @@
   (fp_rect (start -9 -3.25) (end 9.5 3.5)
     (stroke (width 0.1) (type default)) (fill none) (layer "Margin") (tstamp 19724aac-5d67-45e1-b7c4-20f5cf84dc49))
   (pad "1" thru_hole circle (at -4.7 0) (size 3 3) (drill 1.85) (layers "*.Cu" "*.Mask") (tstamp 72693e96-a3e1-415f-bd7f-a705bfeab909))
-  (pad "2" thru_hole circle (at 0 0) (size 3 3) (drill 1.85) (layers "*.Cu" "*.Mask") (tstamp 6127670e-c3e9-4e1d-8ff6-451f2676c188))
-  (pad "3" thru_hole circle (at 4.7 0) (size 3 3) (drill 1.85) (layers "*.Cu" "*.Mask") (tstamp d02ae9f1-b0a2-4256-b712-cf3d1a158a90))
+  (pad "3" thru_hole circle (at 0 0) (size 3 3) (drill 1.85) (layers "*.Cu" "*.Mask") (tstamp 6127670e-c3e9-4e1d-8ff6-451f2676c188))
+  (pad "4" thru_hole circle (at 4.7 0) (size 3 3) (drill 1.85) (layers "*.Cu" "*.Mask") (tstamp d02ae9f1-b0a2-4256-b712-cf3d1a158a90))
 )
