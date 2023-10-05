@@ -1447,7 +1447,7 @@
     (property "Datasheet" "" (at 203.2 147.32 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2d3db46a-abc4-4171-8e2b-199d2525d6aa))
+    (pin "1" (uuid c98e1245-84ae-48b6-a42f-2c88b2e6a928))
     (instances
       (project "Kyttiludzinator"
         (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44/29ef3ad0-9a27-4625-86ca-e3237d209475"
@@ -1500,8 +1500,8 @@
     (property "Height" "0603" (at 203.2 130.81 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9b03ea27-e0a6-461a-9309-4924b0533685))
-    (pin "2" (uuid cbcb0392-6e10-4157-9432-83e18b03b42a))
+    (pin "1" (uuid 53212d17-83f8-4460-bdaf-0a375211807a))
+    (pin "2" (uuid d84e9cd5-70a9-4b3e-a842-83fcf9a63d91))
     (instances
       (project "Kyttiludzinator"
         (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44/29ef3ad0-9a27-4625-86ca-e3237d209475"
@@ -1683,7 +1683,7 @@
     (property "Datasheet" "" (at 189.23 148.59 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 92647131-bf1d-4e6d-9d9a-052dad3b672e))
+    (pin "1" (uuid 38b708f0-05ea-4c00-9b2d-53bf2f4f9c28))
     (instances
       (project "Kyttiludzinator"
         (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44/29ef3ad0-9a27-4625-86ca-e3237d209475"
@@ -1763,7 +1763,7 @@
     (property "Datasheet" "" (at 203.2 123.19 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 09e2a854-a1b3-410b-b67a-227cf6008bb4))
+    (pin "1" (uuid 73000418-a872-4697-b7dd-689493c27f9f))
     (instances
       (project "Kyttiludzinator"
         (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44/29ef3ad0-9a27-4625-86ca-e3237d209475"
@@ -1864,8 +1864,8 @@
     (property "Height" "0603" (at 203.2 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 73237f21-95df-49fe-8d66-086c65a92df9))
-    (pin "2" (uuid 13652492-3207-4872-9bba-4b613005b2e9))
+    (pin "1" (uuid 98753c34-d7b4-4ba6-9d9d-04023147ccf3))
+    (pin "2" (uuid fcb462dc-a535-4e7d-8191-63bce4ac0827))
     (instances
       (project "Kyttiludzinator"
         (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44/29ef3ad0-9a27-4625-86ca-e3237d209475"
@@ -2553,8 +2553,8 @@
     (property "Datasheet" "~" (at 189.23 142.24 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d0eee2f2-1c4d-415c-8836-b0c6585de5eb))
-    (pin "2" (uuid d9fb275a-df40-4c09-a89f-8a1818b71ee2))
+    (pin "1" (uuid 364ba019-58f9-4023-aa83-9948c71fffb6))
+    (pin "2" (uuid 05853589-6d4e-4558-b0d2-cb6f1b4fe98f))
     (instances
       (project "Kyttiludzinator"
         (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44/29ef3ad0-9a27-4625-86ca-e3237d209475"
