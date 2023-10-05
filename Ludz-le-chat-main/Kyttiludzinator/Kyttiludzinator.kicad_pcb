@@ -7177,11 +7177,11 @@
     (property "ki_keywords" "LED diode light-emitting-diode")
     (path "/71528f02-33a0-49c9-abcb-9007a031c95a/5ea634d1-ecce-4d83-a126-c8e6bc5d8296")
     (attr smd)
-    (fp_text reference "D206" (at 0 -1.43 -90) (layer "F.SilkS")
+    (fp_text reference "D206" (at 0 -1.43 -90) (layer "F.SilkS") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 3ec7e0f1-152d-4481-9ba6-799eaac857ff)
     )
-    (fp_text value "GREEN" (at 0 1.43 -90) (layer "F.Fab")
+    (fp_text value "GREEN" (at 0 1.43 -90) (layer "F.Fab") hide
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 3477107f-1cea-478d-9b34-5fcfa6cb7ed0)
     )
