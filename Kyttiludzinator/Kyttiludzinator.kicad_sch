@@ -1,0 +1,93 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid ae6948d5-1dc0-45d1-b607-44e44d4b2b44)
+
+  (paper "A4")
+
+  (title_block
+    (title "Carte éléctronique Ludzinator")
+    (date "2023-09-19")
+    (rev "GILLES Baptiste")
+  )
+
+  (lib_symbols
+  )
+
+
+  (text "Ludzinator" (at 133.35 21.59 0)
+    (effects (font (size 4 4) (thickness 0.8) bold) (justify left bottom))
+    (uuid 1e095c36-4206-4ee5-a09e-b497c1c2a6b0)
+  )
+
+  (sheet (at 173.99 87.63) (size 83.82 73.66) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 255 7 219 1.0000))
+    (uuid 29ef3ad0-9a27-4625-86ca-e3237d209475)
+    (property "Sheetname" "Drivers_moteurs" (at 173.99 85.5534 0)
+      (effects (font (size 4 4) bold) (justify left bottom))
+    )
+    (property "Sheetfile" "MoteurProjet_sch.kicad_sch" (at 173.99 161.8746 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "4"))
+      )
+    )
+  )
+
+  (sheet (at 91.44 67.31) (size 71.12 95.25) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 78 4 255 1.0000))
+    (uuid 71528f02-33a0-49c9-abcb-9007a031c95a)
+    (property "Sheetname" "STM32G070RBT6" (at 91.44 65.2334 0)
+      (effects (font (size 4 4) bold) (justify left bottom))
+    )
+    (property "Sheetfile" "STM32G070RBTx.kicad_sch" (at 91.44 163.1446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 24.13 41.91) (size 54.61 60.96) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 255 1 22 1.0000))
+    (uuid a7615b68-eaec-40b2-84b5-a1a21f69b043)
+    (property "Sheetname" "Alimentation" (at 24.13 39.8334 0)
+      (effects (font (size 4 4) bold) (justify left bottom))
+    )
+    (property "Sheetfile" "Charger.kicad_sch" (at 24.13 103.4546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "3"))
+      )
+    )
+  )
+
+  (sheet (at 22.86 120.65) (size 66.04 41.91) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 39 255 0 1.0000))
+    (uuid f36161ad-3a1f-4728-bb96-7d7ecbaa85c4)
+    (property "Sheetname" "Capteurs et IMU" (at 22.86 118.5734 0)
+      (effects (font (size 4 4) bold) (justify left bottom))
+    )
+    (property "Sheetfile" "Moustache.kicad_sch" (at 22.86 163.1446 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "Kyttiludzinator"
+        (path "/ae6948d5-1dc0-45d1-b607-44e44d4b2b44" (page "5"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
