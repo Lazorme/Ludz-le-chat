@@ -8,9 +8,22 @@ SERVAN Antoine
 
 GILLES Baptiste
 
-## PCB
+## Aperçu
 ![Cumulative counting example](image/PCB1.png)
 
+## Contenu du Répertoire
+
+Le projet est organisé de la manière suivante :
+
+- **/Testmoteur** : Contient les fichiers de conception KiCad de la carte test afin de choisir le meilleur capteur de courant.
+- **/Kyttiludzinator** : Contient les fichiers de conception KiCad, y compris le schéma, le PCB et les bibliothèques personnalisées.
+- **/Image** : Stocke des images et des captures d'écran pour la documentation.
+- **/Composants** : Pour tout autre fichier pertinent, par exemple, des modèles 3D, les empreintes des composants ect ....
+
+## Logiciel Requis
+
+- KiCad 5.0 ou supérieur : Un outil de conception électronique open-source. [Télécharger KiCad](https://kicad-pcb.org/download/)
+- 
 ## How to use ?
 1. Components
 
