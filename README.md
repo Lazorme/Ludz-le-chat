@@ -3,7 +3,9 @@
 This project aims to create a PCB card for controlling a robot equipped with various sensors such as IMU, Lidar, or motion sensors. The primary objective is to enable the robot to engage in a game of cat and mouse. When one robot is touched, it becomes the cat and must chase the other robots. To accomplish this, one of the key goals is to develop a complex algorithm capable of understanding its environment, determining its location, and effectively interacting with other robots, either by tagging them or evading them when it's not the cat.
 
 CHARBONENAU TOM
+
 SERVAN Antoine
+
 GILLES Baptiste
 
 ## PCB
