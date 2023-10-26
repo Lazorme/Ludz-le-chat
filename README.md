@@ -12,7 +12,9 @@ This project aims to create a PCB card for controlling a robot equipped with var
 In [Components_Table.cvs](Components_Table.cvs) you can find all the components uses in this project
 2. Kicad
 
-Launch [Kittyludzinator](Ludz-le-chat-main/Kyttiludzinator/Kyttiludzinator.kicad_pro) to open the project with KICAD
+Launch [Kittyludzinator](Kyttiludzinator/Kyttiludzinator.kicad_pro) to open the project with KICAD
+
+3. Ouput file
 
 
 
