@@ -4,7 +4,7 @@ This project aims to create a PCB card for controlling a robot equipped with var
 
 
 ## PCB
-![Cumulative counting example](image/PCB.png)
+![Cumulative counting example](image/PCB1.png)
 
 ## How to use ?
 1. Components
