@@ -1,0 +1,9 @@
+Manufacturer=STMicroelectronics
+PartNumber=STM32G070RBT6
+PartCategory=Integrated Circuit
+PackageCategory=Quad Flat Packages
+PinCount=64
+Version=2.1
+Released=2019-03-15 16:40:00
+Downloaded=2023-09-19 07:23:05
+3D=Y

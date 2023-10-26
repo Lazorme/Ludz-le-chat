@@ -1,0 +1,98 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "74438356047HT"
+   (description "WURTH ELEKTRONIK - 74438356047HT - Power Inductor (SMD), 4.7 H, 3 A, Shielded, 3.7 A, WE-MAPI Series, 4.1mm x 4.1mm x 2.1mm")
+   (family "ANA")
+   (package "INDPM4141X210N")
+   (attribute "Datasheet Link" "https://www.we-online.com/catalog/datasheet/74438356047HT.pdf")
+   (attribute "Geometry.Height" "2.1mm")
+   (attribute "Mouser Part Number" "710-74438356047HT")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/74438356047HT?qs=YwPsRIUVAOcmekVUpNwTmA%3D%3D")
+   (attribute "Manufacturer_Name" "Wurth Elektronik")
+   (attribute "Manufacturer_Part_Number" "74438356047HT")
+   (gate
+    (symbol "74438356047HT")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "74438356047HT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "INDPM4141X210N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -2.9 2.4)
+      (pt 2.9 2.4)
+      (pt 2.9 -2.4)
+      (pt -2.9 -2.4)
+      (pt -2.9 2.4))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.05 2.05)
+      (pt 2.05 2.05)
+      (pt 2.05 -2.05)
+      (pt -2.05 -2.05)
+      (pt -2.05 2.05))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 2.05 2.05)
+      (pt -2.05 2.05))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -2.05 -2.05)
+      (pt 2.05 -2.05))))
+   (leg 1 (pt -1.55 0) (padstack 0))
+   (leg 2 (pt 1.55 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 2.2 2.5 0 0 90))
+   )
+   (model "74438356047HT.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'ZXBM5210_S_13'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Diodes Inc.", "ZXBM5210-S-13" (!) = "", "SOIC127P600X175-8N", "Small Outline Packages", "621-ZXBM5210-S-13", "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN%2FnWUQiQlr91Z1%2FDTeg%3D%3D", "DiodesZetex ZXBM5210-S-13, DC Motor Driver", "https://rs.componentsearchengine.com/Datasheets/1/ZXBM5210-S-13.pdf", "1.75 mm"
+END_PART
+
+END.

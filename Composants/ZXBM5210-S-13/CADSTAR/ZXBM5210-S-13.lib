@@ -1,0 +1,16 @@
+.ZXBM5210-S-13 :1 ;DiodesZetex ZXBM5210-S-13, DC Motor Driver
+SOIC127P600X175-8N
+*STM M
+*NGS
+*PLB 1="OUT1" 2="VM" 3="VDD" 4="FWD" 5="REV" 6="VREF" 7="OUT2" 8="GND"
+*MXP 8
+*DFN ZXBM5210-S-13
+~!Mouser Part Number (621-ZXBM5210-S-13)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN%2FnWUQiQlr91Z1%2FDTeg%3D%3D)
+~!Manufacturer_Name (Diodes Inc.)
+~!Manufacturer_Part_Number (ZXBM5210-S-13)
+~!Link Datasheet (https://rs.componentsearchengine.com/Datasheets/1/ZXBM5210-S-13.pdf)
+~!Height (1.75mm)
+~!3D_Model (ZXBM5210-S-13)
+ZXBM5210-S-13
+1.1!Y 2.1!P 3.1!P 4.1!I 8.1!G 7.1!Y 6.1!I 5.1!I 

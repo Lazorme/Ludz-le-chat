@@ -1,0 +1,9 @@
+Manufacturer=Würth Elektronik
+PartNumber=74438356047HT
+PartCategory=Integrated Circuit
+PackageCategory=Inductors Precision Moulded
+PinCount=2
+Version=1.1
+Released=2022-04-02 06:29:09
+Downloaded=2023-09-28 08:27:44
+3D=Y

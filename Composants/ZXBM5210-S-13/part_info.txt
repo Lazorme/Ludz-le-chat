@@ -1,0 +1,9 @@
+Manufacturer=Diodes Inc.
+PartNumber=ZXBM5210-S-13
+PartCategory=Motor
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=1.1
+Released=2020-02-25 09:13:57
+Downloaded=2023-09-22 10:30:10
+3D=Y

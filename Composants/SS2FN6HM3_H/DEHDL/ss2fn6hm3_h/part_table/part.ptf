@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'SS2FN6HM3_H'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Vishay", "SS2FN6HM3/H" (!) = "", "SODFL3718X108N", "Small Outline Diode Flat Lead", "78-SS2FN6HM3/H", "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/SS2FN6HM3-H?qs=ECv811tYSNgeSl37rhIfaw%3D%3D", "Schottky Diodes & Rectifiers 60V Vrrm 2A IF(AV) A EC-Q101 Qualified", "https://www.mouser.co.uk/datasheet/2/427/ss2fn6-1125621.pdf", "1.08 mm"
+END_PART
+
+END.

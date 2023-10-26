@@ -1,0 +1,18 @@
+.MP1475DJ-LF-P :1 ;Switching Voltage Regulators 3A, 16V, 500kHz Sync, Stp-Dwn Cnvrtr
+SOT65P280X100-8N
+*STM IC
+*NGS
+*PLB 1="PG" 2="IN" 3="SW" 4="GND" 5="BST" 6="EN/SYNC" 7="VCC" 8="FB"
+*MXP 8
+*DFN MP1475DJ-LF-P
+~!Manufacturer_Name (Monolithic Power Systems (MPS))
+~!Manufacturer_Part_Number (MP1475DJ-LF-P)
+~!Mouser Part Number (946-MP1475DJLFP)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Monolithic-Power-Systems-MPS/MP1475DJ-LF-P?qs=Iq7RKQRjpgoaxnjiXuhBAA%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://www.monolithicpower.com/en/documentview/productdocument/index/version/2/document_type/Datasheet/lang/en/sku/MP1475/document_id/342)
+~!Height (1mm)
+~!3D_Model (MP1475DJ-LF-P)
+MP1475DJ-LF-P
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 

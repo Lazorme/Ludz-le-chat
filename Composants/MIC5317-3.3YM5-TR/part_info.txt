@@ -1,0 +1,9 @@
+Manufacturer=Microchip
+PartNumber=MIC5317-3.3YM5-TR
+PartCategory=Power Supply
+PackageCategory=SOT23 (5-Pin)
+PinCount=5
+Version=2.1
+Released=2019-03-17 11:22:39
+Downloaded=2023-09-19 07:30:14
+3D=Y

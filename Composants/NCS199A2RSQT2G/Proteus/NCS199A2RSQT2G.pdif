@@ -1,0 +1,122 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "NCS199A2RSQT2G"
+   (description "CURRENT SENSE AMP G=100")
+   (family "ANA")
+   (package "SOT65P210X110-6N")
+   (attribute "Datasheet Link" "http://www.onsemi.com/pub/Collateral/NCS199A1R-D.PDF")
+   (attribute "Geometry.Height" "1.1mm")
+   (attribute "Mouser Part Number" "863-NCS199A2RSQT2G")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/onsemi/NCS199A2RSQT2G?qs=MLItCLRbWswy48vDwGmPrw%3D%3D")
+   (attribute "Manufacturer_Name" "onsemi")
+   (attribute "Manufacturer_Part_Number" "NCS199A2RSQT2G")
+   (gate
+    (symbol "NCS199A2RSQT2G")
+    (pin "REF" 1 PS)
+    (pin "GND" 2 PS)
+    (pin "VS" 3 PS)
+    (pin "OUT" 6 PS)
+    (pin "IN-" 5 PS)
+    (pin "IN+" 4 PS)
+   )
+  )
+  (symbol "NCS199A2RSQT2G"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 900 100) (pt 900 -300) (pt 200 -300) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1100 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1100 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1100 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "SOT65P210X110-6N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -1.8 1.35)
+      (pt 1.8 1.35)
+      (pt 1.8 -1.35)
+      (pt -1.8 -1.35)
+      (pt -1.8 1.35))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -0.625 1)
+      (pt 0.625 1)
+      (pt 0.625 -1)
+      (pt -0.625 -1)
+      (pt -0.625 1))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -0.625 0.35)
+      (pt 0.025 1))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -1.55 1.2)
+      (pt -0.35 1.2))))
+   (leg 1 (pt -0.95 0.65) (padstack 0))
+   (leg 2 (pt -0.95 0) (padstack 0))
+   (leg 3 (pt -0.95 -0.65) (padstack 0))
+   (leg 4 (pt 0.95 -0.65) (padstack 0))
+   (leg 5 (pt 0.95 0) (padstack 0))
+   (leg 6 (pt 0.95 0.65) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.4 1.2 0 0 0))
+   )
+   (model "NCS199A2RSQT2G.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

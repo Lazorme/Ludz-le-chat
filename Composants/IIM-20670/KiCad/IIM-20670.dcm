@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP IIM-20670
+D IMUs - Inertial Measurement Units 6-axis Industrial IMU, Motion Tracking, SmartIndustrial
+K
+F https://invensense.tdk.com/download-pdf/iim-20670-product-brief/
+$ENDCMP
+#
+#End Doc Library

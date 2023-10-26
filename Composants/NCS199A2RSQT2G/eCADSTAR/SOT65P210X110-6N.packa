@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "NCS199A2RSQT2G"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2018-07-19-08:48:55)
+    (mountForm default
+        (footprintRef "SOT65P210X110-6N")
+        (spec "System")
+    )
+)

@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_18360368"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2023-07-16-03:23:35)
+    (utime 2023-07-16-03:23:35)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "3425L200_60MR")
+)
+
+
+(pinAssign "ECS_18360368"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2023-07-16-03:23:35)
+    (utime 2023-07-16-03:23:35)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_18360368")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "3425L200_60MR")
+)
+
+
+(part "3425L200_60MR"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2023-07-16-03:23:35)
+    (utime 2023-07-16-03:23:35)
+    (packageRef "3425L200_60MR")
+    (pinAssignRef "ECS_18360368")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "F")
+    (property "description" "Resettable Fuses - PPTC 3425L Series PPTC")
+    (property "Mouser_Part_Number" "576-3425L200/60MR")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/3425L200-60MR?qs=Jm2GQyTW%2Fbiqdph8lH2A%2FA%3D%3D")
+    (property "Manufacturer_Name" "LITTELFUSE")
+    (property "Manufacturer_Part_Number" "3425L200/60MR")
+    (property "Datasheet_Link" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=bc6d850b-99e2-4108-9141-9afcdeb5e383&filename=littelfuse-pptc-3425l-datasheet")
+    (property "compAreaTopHeight" 1.8)
+)
+
+

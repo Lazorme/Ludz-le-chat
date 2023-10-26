@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32G070RBT6
+D ARM Microcontrollers - MCU Arm Cortex -M0+ 32-bit MCU, 128 KB Flash, 36 KB RAM, 4x USART, timers, ADC, comm. I/Fs, 2.0-3.6V
+K
+F https://componentsearchengine.com/Datasheets/1/STM32G070RBT6.pdf
+$ENDCMP
+#
+#End Doc Library

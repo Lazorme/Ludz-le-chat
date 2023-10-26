@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '74438356047HT'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Wurth Elektronik", "74438356047HT" (!) = "", "INDPM4141X210N", "Inductors Precision Moulded", "710-74438356047HT", "https://www.mouser.co.uk/ProductDetail/Wurth-Elektronik/74438356047HT?qs=YwPsRIUVAOcmekVUpNwTmA%3D%3D", "WURTH ELEKTRONIK - 74438356047HT - Power Inductor (SMD), 4.7 H, 3 A, Shielded, 3.7 A, WE-MAPI Series, 4.1mm x 4.1mm x 2.1mm", "https://www.we-online.com/catalog/datasheet/74438356047HT.pdf", "2.1 mm"
+END_PART
+
+END.

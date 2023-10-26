@@ -1,0 +1,9 @@
+Manufacturer=LITTELFUSE
+PartNumber=3425L200/60MR
+PartCategory=Fuse
+PackageCategory=Fuses Chip
+PinCount=2
+Version=1.1
+Released=2023-07-16 03:23:35
+Downloaded=2023-10-13 13:53:22
+3D=Y

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SS2FN6HM3_H
+D Schottky Diodes & Rectifiers 60V Vrrm 2A IF(AV) A EC-Q101 Qualified
+K
+F https://www.mouser.co.uk/datasheet/2/427/ss2fn6-1125621.pdf
+$ENDCMP
+#
+#End Doc Library

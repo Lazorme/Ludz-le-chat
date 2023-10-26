@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "3425L200_60MR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2023-07-16-03:23:35)
+    (mountForm default
+        (footprintRef "FUSC8664X180N")
+        (spec "System")
+    )
+)

@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'STM32G070RBT6'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "STMicroelectronics", "STM32G070RBT6" (!) = "", "QFP50P1200X1200X160-64N", "Quad Flat Packages", "511-STM32G070RBT6", "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32G070RBT6?qs=l7cgNqFNU1g2MF3TqxTHUQ%3D%3D", "ARM Microcontrollers - MCU Arm Cortex -M0+ 32-bit MCU, 128 KB Flash, 36 KB RAM, 4x USART, timers, ADC, comm. I/Fs, 2.0-3.6V", "https://componentsearchengine.com/Datasheets/1/STM32G070RBT6.pdf", "1.6 mm"
+END_PART
+
+END.

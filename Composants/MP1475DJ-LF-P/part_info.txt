@@ -1,0 +1,9 @@
+Manufacturer=Monolithic Power Systems (MPS)
+PartNumber=MP1475DJ-LF-P
+PartCategory=Integrated Circuit
+PackageCategory=SOT23 (8-Pin)
+PinCount=8
+Version=1.2
+Released=2023-09-23 08:07:03
+Downloaded=2023-09-25 20:02:56
+3D=Y

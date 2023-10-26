@@ -1,0 +1,95 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "3425L200_60MR"
+   (description "Resettable Fuses - PPTC 3425L Series PPTC")
+   (family "FUS")
+   (package "FUSC8664X180N")
+   (attribute "Datasheet Link" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=bc6d850b-99e2-4108-9141-9afcdeb5e383&filename=littelfuse-pptc-3425l-datasheet")
+   (attribute "Geometry.Height" "1.8mm")
+   (attribute "Mouser Part Number" "576-3425L200/60MR")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Littelfuse/3425L200-60MR?qs=Jm2GQyTW%2Fbiqdph8lH2A%2FA%3D%3D")
+   (attribute "Manufacturer_Name" "LITTELFUSE")
+   (attribute "Manufacturer_Part_Number" "3425L200/60MR")
+   (gate
+    (symbol "3425L200_60MR")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+   )
+  )
+  (symbol "3425L200_60MR"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 50) (pt 500 50) (pt 500 -50) (pt 200 -50) (pt 200 50) (closed))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 0) (pt 500 0))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 700 0) (rot 0) (mir X) (visible true))
+    (name (pt 0 -10) (rot 0) (just TOP LEFT) (visible false))
+    (number (pt 0 10) (rot 0) (just BOTTOM LEFT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "FUSC8664X180N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -5.105 3.605)
+      (pt 5.105 3.605)
+      (pt 5.105 -3.605)
+      (pt -5.105 -3.605)
+      (pt -5.105 3.605))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -4.325 3.175)
+      (pt 4.325 3.175)
+      (pt 4.325 -3.175)
+      (pt -4.325 -3.175)
+      (pt -4.325 3.175))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 0 3.075)
+      (pt 0 -3.075))))
+   (leg 1 (pt -3.49 0) (padstack 0))
+   (leg 2 (pt 3.49 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 2.73 6.71 0 0 90))
+   )
+   (model "3425L200_60MR.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

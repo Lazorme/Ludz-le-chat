@@ -1,0 +1,16 @@
+.IIM-20670 :1 ;IMUs - Inertial Measurement Units 6-axis Industrial IMU, Motion Tracking, SmartIndustrial
+QFN50P450X450X115-25N
+*STM IC
+*NGS
+*PLB 1="MOSI" 2="GND_1" 3="GND_2" 4="GND_3" 5="GND_4" 6="FL_1" 7="GND_5" 8="VDDIO" 9="MISO" 10="REGOUT" 11="VDD" 12="ODR" 13="FL_2" 14="GND_6" 15="GND_7" 16="GND_8" 17="GND_9" 18="RESETN" 19="FL_3" 20="VPP" 21="FL_4" 22="GND_10" 23="NCS" 24="SCLK" 25="THERMAL PAD"
+*MXP 25
+*DFN IIM-20670
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Manufacturer_Name (TDK)
+~!Manufacturer_Part_Number (IIM-20670)
+~!Link Datasheet (https://invensense.tdk.com/download-pdf/iim-20670-product-brief/)
+~!Height (1.15mm)
+~!3D_Model (IIM-20670)
+IIM-20670
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 18.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 25.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 

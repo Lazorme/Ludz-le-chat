@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '3425L200_60MR'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "LITTELFUSE", "3425L200/60MR" (!) = "", "FUSC8664X180N", "Fuses Chip", "576-3425L200/60MR", "https://www.mouser.co.uk/ProductDetail/Littelfuse/3425L200-60MR?qs=Jm2GQyTW%2Fbiqdph8lH2A%2FA%3D%3D", "Resettable Fuses - PPTC 3425L Series PPTC", "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=bc6d850b-99e2-4108-9141-9afcdeb5e383&filename=littelfuse-pptc-3425l-datasheet", "1.8 mm"
+END_PART
+
+END.

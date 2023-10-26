@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "IIM-20670"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2023-08-26-11:36:19)
+    (mountForm default
+        (footprintRef "QFN50P450X450X115-25N")
+        (spec "System")
+    )
+)

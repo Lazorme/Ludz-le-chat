@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model ZXBM5210-S-13
+#/528690/852054/2.50/8/3/Motor
+DEF ZXBM5210-S-13 M 0 30 Y Y 1 F N
+F0 "M" 950 300 50 H V L CNN
+F1 "ZXBM5210-S-13" 950 200 50 H V L CNN
+F2 "SOIC127P600X175-8N" 950 100 50 H I L CNN
+F3 "https://rs.componentsearchengine.com/Datasheets/1/ZXBM5210-S-13.pdf" 950 0 50 H I L CNN
+F4 "DiodesZetex ZXBM5210-S-13, DC Motor Driver" 950 -100 50 H I L CNN "Description"
+F5 "1.75" 950 -200 50 H I L CNN "Height"
+F6 "621-ZXBM5210-S-13" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/ZXBM5210-S-13?qs=98WN%2FnWUQiQlr91Z1%2FDTeg%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Diodes Inc." 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "ZXBM5210-S-13" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X OUT1 1 0 0 200 R 50 50 0 0 O
+X VM 2 0 -100 200 R 50 50 0 0 W
+X VDD 3 0 -200 200 R 50 50 0 0 W
+X FWD 4 0 -300 200 R 50 50 0 0 I
+X GND 8 1100 0 200 L 50 50 0 0 W
+X OUT2 7 1100 -100 200 L 50 50 0 0 O
+X VREF 6 1100 -200 200 L 50 50 0 0 I
+X REV 5 1100 -300 200 L 50 50 0 0 I
+P 5 0 1 6 200 100 900 100 900 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

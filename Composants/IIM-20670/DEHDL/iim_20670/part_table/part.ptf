@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'IIM_20670'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "TDK", "IIM-20670" (!) = "", "QFN50P450X450X115-25N", "Quad Flat No-Lead", "", "", "IMUs - Inertial Measurement Units 6-axis Industrial IMU, Motion Tracking, SmartIndustrial", "https://invensense.tdk.com/download-pdf/iim-20670-product-brief/", "1.15 mm"
+END_PART
+
+END.
