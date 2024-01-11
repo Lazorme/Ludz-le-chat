@@ -1,0 +1,2 @@
+../drv_Motor/sensor.c:11:6:codeur_init	1
+../drv_Motor/sensor.c:19:5:Get_speed	1

@@ -1,0 +1,2 @@
+../drv_Motor/control.c:22:5:angle_inverse	2
+../drv_Motor/control.c:33:6:ajusterAlphaMoteurs	6

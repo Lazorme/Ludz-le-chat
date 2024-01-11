@@ -1,0 +1,2 @@
+../drv_Motor/control.c:22:5:angle_inverse	24	static
+../drv_Motor/control.c:33:6:ajusterAlphaMoteurs	32	static

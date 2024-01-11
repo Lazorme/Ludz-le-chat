@@ -1,0 +1,56 @@
+/*
+ * pwm.c
+ *
+ *  Created on: Nov 30, 2023
+ *      Author: serva
+ */
+
+#include "pwm.h"
+
+
+//Gestion de l'allumage des moteurs
+int pwm_start(TIM_HandleTypeDef htim, int Channel)
+{
+	return HAL_TIM_PWM_Start(&htim, Channel);
+}
+
+int pwm_stop(TIM_HandleTypeDef htim, int Channel)
+{
+	return HAL_TIM_PWM_Stop(&htim, Channel);
+}
+
+//Initialisation des moteurs
+void motor_Init(struct Motor_drv_struct *moteur1, struct Motor_drv_struct *moteur2){
+
+	moteur1->Channel_Backward = TIM_CHANNEL_1;
+	moteur1->Channel_Forward = TIM_CHANNEL_2;
+	moteur1->Timer_Backward = htim15;
+	moteur1->Timer_Forward = htim15;
+	moteur1->pwm_start = pwm_start;
+	moteur1->pwm_stop = pwm_stop;
+	moteur1->update = update_motor;
+
+	moteur2->Channel_Backward = TIM_CHANNEL_1;
+	moteur2->Channel_Forward = TIM_CHANNEL_1;
+	moteur2->Timer_Backward = htim16;
+	moteur2->Timer_Forward = htim17;
+	moteur2->pwm_start = pwm_start;
+	moteur2->pwm_stop = pwm_stop;
+	moteur2->update = update_motor;
+}
+
+//Update alpha du moteur
+void update_motor(struct Motor_drv_struct motor)
+{
+	if (motor.sens == 1)
+	{
+		__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,motor.alpha);
+		__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,0);
+	}
+	if (motor.sens == 2)
+	{
+		__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,0);
+		__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,motor.alpha);
+	}
+}
+
