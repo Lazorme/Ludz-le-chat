@@ -93,7 +93,7 @@ void capt_task(){
 			capteurs.CONTACT_4 = FALSE;
 		}
 
-
+/*
 		vTaskSuspend(xHandleMOTOR);
 		if (capteurs.BORDURE_1)
 		{
@@ -139,7 +139,7 @@ void capt_task(){
 			capteurs.BORDURE_2 = FALSE;
 		}
 		vTaskResume(xHandleMOTOR);
-
+*/
 
 	}
 }

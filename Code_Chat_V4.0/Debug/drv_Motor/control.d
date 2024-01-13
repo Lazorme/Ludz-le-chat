@@ -38,7 +38,7 @@ drv_Motor/control.o: ../drv_Motor/control.c ../drv_Motor/control.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  ../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h \
  ../Core/Inc/gpio.h ../drv_Motor/sensor.h ../drv_Motor/pwm.h \
- C:/Users/tomch/Desktop/gitproj/Ludz-le-chat/Code_Chat_V3.0/drv_LIDAR/drv_LIDAR.h
+ C:/Users/tomch/Desktop/proj\ 2/Ludz-le-chat/Code_Chat_V4.0/drv_LIDAR/drv_LIDAR.h
 ../drv_Motor/control.h:
 ../Core/Inc/tim.h:
 ../Core/Inc/main.h:
@@ -82,4 +82,4 @@ drv_Motor/control.o: ../drv_Motor/control.c ../drv_Motor/control.h \
 ../Core/Inc/gpio.h:
 ../drv_Motor/sensor.h:
 ../drv_Motor/pwm.h:
-C:/Users/tomch/Desktop/gitproj/Ludz-le-chat/Code_Chat_V3.0/drv_LIDAR/drv_LIDAR.h:
+C:/Users/tomch/Desktop/proj\ 2/Ludz-le-chat/Code_Chat_V4.0/drv_LIDAR/drv_LIDAR.h:
