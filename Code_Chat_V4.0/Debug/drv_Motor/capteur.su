@@ -1,3 +1,3 @@
-../drv_Motor/capteur.c:26:6:capt_task	8	static
+../drv_Motor/capteur.c:26:6:capt_task	200	static
 ../drv_Motor/capteur.c:147:5:capt_init	24	static
 ../drv_Motor/capteur.c:178:6:HAL_GPIO_EXTI_Rising_Callback	24	static

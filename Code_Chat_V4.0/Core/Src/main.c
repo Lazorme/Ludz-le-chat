@@ -236,8 +236,8 @@ void TaskLIDAR (void * pvParameters){
 					alpha2 = 900;
 				}
 			}
-			motor2.sens = 2;
-			motor1.sens =1;
+			motor2.sens = SENS_MOTOR_2;
+			motor1.sens = SENS_MOTOR_1;
 			motor1.alpha = alpha1;
 			motor2.alpha = alpha2;
 		}
@@ -258,8 +258,8 @@ void TaskLIDAR (void * pvParameters){
 				}
 			}
 
-			motor2.sens = 1;
-			motor1.sens =2;
+			motor2.sens = SENS_MOTOR_1;
+			motor1.sens =SENS_MOTOR_2;
 			motor1.alpha =   alpha2;
 			motor2.alpha =   alpha1;
 
@@ -360,12 +360,12 @@ int main(void)
 	LIDAR_start(&h_LIDAR);
 	//Initialisation
 	motor_Init(&motor1,&motor2);
-	motor1.sens = 1;
-	motor1.old_sens = 1;
+	motor1.sens = SENS_MOTOR_1;
+	motor1.old_sens = SENS_MOTOR_1;
 	motor1.pwm_start(motor1.Timer_Backward,motor1.Channel_Backward);
 	motor1.pwm_start(motor1.Timer_Forward,motor1.Channel_Forward);
-	motor2.sens = 2;
-	motor2.old_sens = 2;
+	motor2.sens = SENS_MOTOR_2;
+	motor2.old_sens = SENS_MOTOR_2;
 	motor2.pwm_start(motor2.Timer_Backward,motor2.Channel_Backward);
 	motor2.pwm_start(motor2.Timer_Forward,motor2.Channel_Forward);
 

@@ -66,8 +66,8 @@ all: main-build
 main-build: Ludz_le_chat.elf secondary-outputs
 
 # Tool invocations
-Ludz_le_chat.elf Ludz_le_chat.map: $(OBJS) $(USER_OBJS) C:\Users\tomch\Desktop\proj\ 2\Ludz-le-chat\Code_Chat_V4.0\STM32G070RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Ludz_le_chat.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\tomch\Desktop\proj 2\Ludz-le-chat\Code_Chat_V4.0\STM32G070RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ludz_le_chat.map" -Wl,--gc-sections -static -L"C:\Users\tomch\Desktop\proj 2\Ludz-le-chat\Code_Chat_V4.0\drv_LIDAR" -L"C:\Users\tomch\Desktop\proj 2\Ludz-le-chat\Code_Chat_V4.0\drv_Motor" --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Ludz_le_chat.elf Ludz_le_chat.map: $(OBJS) $(USER_OBJS) C:\Users\serva\Documents\ESE\Projet\Ludz-le-chat\Code_Chat_V4.0\STM32G070RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Ludz_le_chat.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\serva\Documents\ESE\Projet\Ludz-le-chat\Code_Chat_V4.0\STM32G070RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ludz_le_chat.map" -Wl,--gc-sections -static -L"C:\Users\serva\Documents\ESE\Projet\Ludz-le-chat\Code_Chat_V4.0\drv_LIDAR" -L"C:\Users\serva\Documents\ESE\Projet\Ludz-le-chat\Code_Chat_V4.0\drv_Motor" --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

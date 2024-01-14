@@ -69,7 +69,7 @@ void capt_task(){
 			break;
 		}
 
-		if (time - lastdebounce_time >2000){
+		if (time - lastdebounce_time >2000){	//permet de changer d'état seulement toute les 2sec
 			if (capteurs.CONTACT_1 || capteurs.CONTACT_2 || capteurs.CONTACT_3 || capteurs.CONTACT_4)
 			{
 				hunter = 1-hunter; //changement d'état pour passer de hunter à souris ou l'inverse
@@ -93,7 +93,7 @@ void capt_task(){
 			capteurs.CONTACT_4 = FALSE;
 		}
 
-/*
+
 		vTaskSuspend(xHandleMOTOR);
 		if (capteurs.BORDURE_1)
 		{
@@ -101,16 +101,16 @@ void capt_task(){
 
 
 			//mettre le code pour reculer et tourner
-			motor1.sens = 2;
-			motor2.sens = 1;
-			motor1.alpha = 400;
-			motor2.alpha = 400;
+			motor1.sens = SENS_MOTOR_2;
+			motor2.sens = SENS_MOTOR_1;
+			motor1.alpha = PUISSANCE_MOTEUR_BORDURE;
+			motor2.alpha = PUISSANCE_MOTEUR_BORDURE;
 			motor1.update(motor1);
 			motor2.update(motor2);
 
 			vTaskDelay(1000);
-			motor1.sens = 2;
-			motor2.sens = 2;
+			motor1.sens = SENS_MOTOR_2;
+			motor2.sens = SENS_MOTOR_2;
 			motor1.update(motor1);
 			motor2.update(motor2);
 			vTaskDelay(1600);
@@ -123,15 +123,15 @@ void capt_task(){
 
 
 			//mettre le code pour reculer et tourner
-			motor1.sens = 1;
-			motor2.sens = 2;
-			motor1.alpha = 400;
-			motor2.alpha = 400;
+			motor1.sens = SENS_MOTOR_1;
+			motor2.sens = SENS_MOTOR_2;
+			motor1.alpha = PUISSANCE_MOTEUR_BORDURE;
+			motor2.alpha = PUISSANCE_MOTEUR_BORDURE;
 			motor1.update(motor1);
 			motor2.update(motor2);
 			vTaskDelay(1000);
-			motor1.sens = 2;
-			motor2.sens = 2;
+			motor1.sens = SENS_MOTOR_2;
+			motor2.sens = SENS_MOTOR_2;
 			motor1.update(motor1);
 			motor2.update(motor2);
 			vTaskDelay(1600);
@@ -139,7 +139,7 @@ void capt_task(){
 			capteurs.BORDURE_2 = FALSE;
 		}
 		vTaskResume(xHandleMOTOR);
-*/
+
 
 	}
 }

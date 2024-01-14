@@ -12,7 +12,9 @@
 #include "gpio.h"
 
 #define alpha_MAX 999
-#define PWM_MAX 100
+#define alpha_min 100
+#define SENS_MOTOR_1 1
+#define SENS_MOTOR_2 2
 
 typedef int (*pwm_start_drv)(TIM_HandleTypeDef htim, int Channel);
 typedef int (*pwm_stop_drv)(TIM_HandleTypeDef htim, int Channel);

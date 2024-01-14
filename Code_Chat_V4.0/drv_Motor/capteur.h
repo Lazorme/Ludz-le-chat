@@ -11,6 +11,8 @@
 #include "stdint.h"
 #include "gpio.h"
 
+#define PUISSANCE_MOTEUR_BORDURE 400
+
 enum BOOL {FALSE, TRUE};
 
 typedef struct CAPT_struct {
@@ -27,6 +29,6 @@ typedef struct CAPT_struct {
 
 int capt_init();
 
-//void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin);
+void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin);
 
 #endif /* INC_BORDURE_BUMPER_H_ */

@@ -44,16 +44,17 @@ void motor_Init(struct Motor_drv_struct *moteur1, struct Motor_drv_struct *moteu
 //Update alpha du moteur
 void update_motor(struct Motor_drv_struct motor)
 {
+	if (motor.alpha > alpha_MAX) motor.alpha = alpha_MAX;
 	if(motor.old_sens == motor.sens){
 		if (motor.old_alpha <= motor.alpha)	//permet de faire une rampe sur le pwm
 		{
 			for (int i = motor.old_alpha; i<=motor.alpha;i++){	//application de la rampe
-				if (motor.sens == 1)
+				if (motor.sens == SENS_MOTOR_1)
 				{
 					__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,i);
 					__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,0);
 				}
-				if (motor.sens == 2)
+				if (motor.sens == SENS_MOTOR_2)
 				{
 					__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,0);
 					__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,i);
@@ -63,12 +64,12 @@ void update_motor(struct Motor_drv_struct motor)
 		else if (motor.old_alpha >= motor.alpha)
 		{
 			for (int i = motor.old_alpha; i>=motor.alpha;i--){	//application de la rampe
-				if (motor.sens == 1)
+				if (motor.sens == SENS_MOTOR_1)
 				{
 					__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,i);
 					__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,0);
 				}
-				if (motor.sens == 2)
+				if (motor.sens == SENS_MOTOR_2)
 				{
 					__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,0);
 					__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,i);
@@ -78,13 +79,13 @@ void update_motor(struct Motor_drv_struct motor)
 	}
 
 	else{
-		for (int i = motor.old_alpha; i>100;i--){	//application de la rampe pour le mettre à l'arret
-			if (motor.old_sens == 1)
+		for (int i = motor.old_alpha; i>alpha_min;i--){	//application de la rampe pour le mettre à l'arret
+			if (motor.old_sens == SENS_MOTOR_1)
 			{
 				__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,i);
 				__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,0);
 			}
-			if (motor.old_sens == 2)
+			if (motor.old_sens == SENS_MOTOR_2)
 			{
 				__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,0);
 				__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,i);
@@ -92,12 +93,12 @@ void update_motor(struct Motor_drv_struct motor)
 		}
 
 		for (int i = 100; i<=motor.alpha;i++){	//application de la rampe pour le démarrer dans l'autre sens
-			if (motor.sens == 1)
+			if (motor.sens == SENS_MOTOR_1)
 			{
 				__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,i);
 				__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,0);
 			}
-			if (motor.sens == 2)
+			if (motor.sens == SENS_MOTOR_2)
 			{
 				__HAL_TIM_SetCompare(&motor.Timer_Backward,motor.Channel_Backward,0);
 				__HAL_TIM_SetCompare(&motor.Timer_Forward,motor.Channel_Forward,i);
