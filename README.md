@@ -9,7 +9,7 @@ SERVAN Antoine
 GILLES Baptiste
 
 ## Aperçu
-![Cumulative counting example](image/PCB1.png)
+![Cumulative counting example](Doc/image/PCB1.png)
 
 ## Contenu du Répertoire
 
