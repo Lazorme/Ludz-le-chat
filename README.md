@@ -11,6 +11,10 @@ GILLES Baptiste
 ## Aperçu
 ![PCB](Doc/image/PCB1.png)
 ![Robot](Doc/image/Robot.jpg)
+
+## Doxygen
+![Doxygen](Doxygen/html/index.html)
+
 ## Contenu du Répertoire
 
 Le projet est organisé de la manière suivante :
@@ -26,7 +30,8 @@ Le projet est organisé de la manière suivante :
 ## Logiciel Requis
 
 - KiCad 5.0 ou supérieur : Un outil de conception électronique open-source. [Télécharger KiCad](https://kicad-pcb.org/download/)
-- 
+- CubeIDE
+- Python
 ## How to use ?
 1. Components
 
@@ -40,7 +45,9 @@ Launch [Kittyludzinator](Doc/Kyttiludzinator/Kyttiludzinator.kicad_pro) to open 
 
 Launch [Kittyludzinator](Doc/Kyttiludzinator/Kyttiludzinator.kicad_pro) to see the gerbers files
 
+4. Open the project file in CubeIDE and upload the code on the robot using an STLink
 
+5. Launch the Python program to observe the cluster's positions.
 
 
 
