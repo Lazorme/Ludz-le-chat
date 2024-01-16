@@ -1,0 +1,340 @@
+\doxysection{Code\+\_\+\+Chat\+\_\+\+V4.0/\+Core/\+Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Code\_Chat\_V4.0/Core/Src/main.c@{Code\_Chat\_V4.0/Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}cmsis\+\_\+os.\+h"{}}\newline
+{\ttfamily \#include "{}adc.\+h"{}}\newline
+{\ttfamily \#include "{}dma.\+h"{}}\newline
+{\ttfamily \#include "{}spi.\+h"{}}\newline
+{\ttfamily \#include "{}tim.\+h"{}}\newline
+{\ttfamily \#include "{}usart.\+h"{}}\newline
+{\ttfamily \#include "{}gpio.\+h"{}}\newline
+{\ttfamily \#include "{}stdio.\+h"{}}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+{\ttfamily \#include "{}drv\+\_\+\+LIDAR.\+h"{}}\newline
+{\ttfamily \#include "{}string.\+h"{}}\newline
+{\ttfamily \#include "{}pwm.\+h"{}}\newline
+{\ttfamily \#include "{}sensor.\+h"{}}\newline
+{\ttfamily \#include "{}control.\+h"{}}\newline
+{\ttfamily \#include "{}capteur.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a6423a880df59733d2d9b509c7718d3a9}\label{main_8c_a6423a880df59733d2d9b509c7718d3a9} 
+\#define {\bfseries STACK\+\_\+\+SIZE}~256
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Valeur retournée lors de la création des taches. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_abade755e13d07c10889ae83143656158}{MX\+\_\+\+FREERTOS\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Free\+RTOS initialization. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a3cfd4c64a086b8c385f5dd0e69712d2a}{\+\_\+\+\_\+io\+\_\+putchar}} (int chr)
+\item 
+int \mbox{\hyperlink{main_8c_ae88be83014fec1b28ac0740e288aca1e}{uart\+\_\+transmit}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+int \mbox{\hyperlink{main_8c_a135d680796efb8569095da19fad11cfd}{uart\+\_\+it\+\_\+transmit}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+int \mbox{\hyperlink{main_8c_a577df8e72c1f0dcc8898a3b44e84cda2}{uart\+\_\+dma\+\_\+transmit}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+int \mbox{\hyperlink{main_8c_a665e8b8ea6d4cd7df848de9bef57159d}{uart\+\_\+poll\+\_\+receive}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+int \mbox{\hyperlink{main_8c_a453ce1561e859194a9798ea1f55c16fd}{uart\+\_\+it\+\_\+receive}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+int \mbox{\hyperlink{main_8c_a9816a9477da5809368133870b88f43c4}{uart\+\_\+dma\+\_\+receive}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+void \mbox{\hyperlink{main_8c_a46242b93b930a56eaf9544b22267766e}{Task\+LIDAR}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_a9e4ef147e448c2924cffb0ccdc1ef8c7}{Task\+MOTOR}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1884970cc493d8efba5aec28c0d526e7}{HAL\+\_\+\+UART\+\_\+\+Rx\+Half\+Cplt\+Callback}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\item 
+void \mbox{\hyperlink{main_8c_ae494a9643f29b87d6d81e5264e60e57b}{HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\item 
+void \mbox{\hyperlink{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a42715f65f02da52edc5b22021d8ae670}\label{main_8c_a42715f65f02da52edc5b22021d8ae670} 
+int {\bfseries time} =0
+\item 
+\Hypertarget{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}\label{main_8c_a60ee8df93c4a8f47c80e506af7aae60b} 
+\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} {\bfseries h\+\_\+\+LIDAR}
+\begin{DoxyCompactList}\small\item\em Compte le temps entre deux appuis sur une moustache pour l\textquotesingle{}anti-\/rebound. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a88ea50f1bb5d3a04605cb1e11b4ae19b}\label{main_8c_a88ea50f1bb5d3a04605cb1e11b4ae19b} 
+\mbox{\hyperlink{struct_motor__drv__struct}{Motor\+\_\+drv\+\_\+struct}} {\bfseries motor1}
+\begin{DoxyCompactList}\small\item\em Le handel du LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a9dbe1f9be9ba60026817fc63ce4b677b}\label{main_8c_a9dbe1f9be9ba60026817fc63ce4b677b} 
+\mbox{\hyperlink{struct_motor__drv__struct}{Motor\+\_\+drv\+\_\+struct}} {\bfseries motor2}
+\begin{DoxyCompactList}\small\item\em Le handel du moteur 1. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_ae7082775a5cf9348f1895d9c37277f43}\label{main_8c_ae7082775a5cf9348f1895d9c37277f43} 
+\mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\+\_\+\+Handle\+Type\+Def}} {\bfseries h\+Codeur\+Left}
+\begin{DoxyCompactList}\small\item\em Le handel du moteur 2. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a11766f4782aee783c97a3f9fb0f46289}\label{main_8c_a11766f4782aee783c97a3f9fb0f46289} 
+\mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\+\_\+\+Handle\+Type\+Def}} {\bfseries h\+Codeur\+Right}
+\begin{DoxyCompactList}\small\item\em Le handel du codeur gauche. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a63177970cacb40efba67ce501ea89210}\label{main_8c_a63177970cacb40efba67ce501ea89210} 
+int {\bfseries angle}
+\begin{DoxyCompactList}\small\item\em Le handel du codeur droit. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a4b512d0a6dcc3c7d7e6dd9a7714852c4}\label{main_8c_a4b512d0a6dcc3c7d7e6dd9a7714852c4} 
+int {\bfseries vitesse}
+\begin{DoxyCompactList}\small\item\em Angle effectué avec le robot le plus proche. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_ac314a1a27d62d425af5232e6faa34566}\label{main_8c_ac314a1a27d62d425af5232e6faa34566} 
+int {\bfseries hunter} = 1
+\begin{DoxyCompactList}\small\item\em Distance du robot le plus proche. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a77b0a0e7e392f92ab4fab92bfb50f21f}\label{main_8c_a77b0a0e7e392f92ab4fab92bfb50f21f} 
+int {\bfseries alpha1}
+\begin{DoxyCompactList}\small\item\em Etat du robot \+: 1 chat et 0 souris. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a26cb1952cc39f7a1b1924738a62b2ade}\label{main_8c_a26cb1952cc39f7a1b1924738a62b2ade} 
+int {\bfseries alpha2}
+\item 
+\Hypertarget{main_8c_a78a3ed5959d2542a3390ab3f07fccd86}\label{main_8c_a78a3ed5959d2542a3390ab3f07fccd86} 
+Semaphore\+Handle\+\_\+t {\bfseries Sem\+Half\+Call\+Back}
+\begin{DoxyCompactList}\small\item\em Rapports cycliques des moteurs. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_ae991b331d08d1c1e2fac9295fbdec5b3}\label{main_8c_ae991b331d08d1c1e2fac9295fbdec5b3} 
+Semaphore\+Handle\+\_\+t {\bfseries Sem\+Clp\+Call\+Back}
+\begin{DoxyCompactList}\small\item\em Semaphore Handle pour la réception DMA de moitiée. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a09835ae1665d071fdcd28fb0f42afabb}\label{main_8c_a09835ae1665d071fdcd28fb0f42afabb} 
+int {\bfseries distance\+\_\+min} =0
+\begin{DoxyCompactList}\small\item\em Semaphore Handle pour la réception DMA totale. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a9909f976ca0dd06702dfce28394c71be}\label{main_8c_a9909f976ca0dd06702dfce28394c71be} 
+int {\bfseries idx\+\_\+min} = 0
+\begin{DoxyCompactList}\small\item\em Distance du cluster le plus proche. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a57d1400fe0a4219a8bea2b8c727c60c0}\label{main_8c_a57d1400fe0a4219a8bea2b8c727c60c0} 
+int {\bfseries frame\+\_\+start} = 0
+\begin{DoxyCompactList}\small\item\em Index du custer le plus proche. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_ad0fe53a65ce2dd51bdc8bb9ee14bf824}\label{main_8c_ad0fe53a65ce2dd51bdc8bb9ee14bf824} 
+int {\bfseries frame\+\_\+end} = 0
+\begin{DoxyCompactList}\small\item\em Indice du début de trame. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_afb787b6d9ae61bedcc83d9e7f51886bb}\label{main_8c_afb787b6d9ae61bedcc83d9e7f51886bb} 
+Task\+Handle\+\_\+t {\bfseries x\+Handle\+LIDAR} = NULL
+\begin{DoxyCompactList}\small\item\em Indice de fin de trame. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_a22416935f3fce3db3713a5eaf085b12d}\label{main_8c_a22416935f3fce3db3713a5eaf085b12d} 
+Task\+Handle\+\_\+t {\bfseries x\+Handle\+MOTOR} = NULL
+\begin{DoxyCompactList}\small\item\em Handle de la tache gérant le LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_ad2519c996ac7811fcc7e87637a01c9d0}\label{main_8c_ad2519c996ac7811fcc7e87637a01c9d0} 
+Base\+Type\+\_\+t {\bfseries ret}
+\begin{DoxyCompactList}\small\item\em Handle de la tache gérant les moteurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAuthor}{Author}
+Tom CHARBONNEAU 
+
+Baptiste GILLES 
+
+Antoine SERVAN
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2024 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a3cfd4c64a086b8c385f5dd0e69712d2a}\label{main_8c_a3cfd4c64a086b8c385f5dd0e69712d2a} 
+\index{main.c@{main.c}!\_\_io\_putchar@{\_\_io\_putchar}}
+\index{\_\_io\_putchar@{\_\_io\_putchar}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{\_\_io\_putchar()}{\_\_io\_putchar()}}
+{\footnotesize\ttfamily int \+\_\+\+\_\+io\+\_\+putchar (\begin{DoxyParamCaption}\item[{int}]{chr }\end{DoxyParamCaption})}
+
+Redirige les printf sur l\textquotesingle{}UART1 \Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}\label{main_8c_a8a3b0ad512a6e6c6157440b68d395eac} 
+\index{main.c@{main.c}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when TIM7 interrupt took place, inside HAL\+\_\+\+TIM\+\_\+\+IRQHandler(). It makes a direct call to HAL\+\_\+\+Inc\+Tick() to increment a global variable "{}uw\+Tick"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & \+: TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Compte le nombre d\textquotesingle{}appels au Sys\+Tick\Hypertarget{main_8c_ae494a9643f29b87d6d81e5264e60e57b}\label{main_8c_ae494a9643f29b87d6d81e5264e60e57b} 
+\index{main.c@{main.c}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
+\index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxCpltCallback()}{HAL\_UART\_RxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+Half Callback de la réception DMA de l\textquotesingle{}UART \Hypertarget{main_8c_a1884970cc493d8efba5aec28c0d526e7}\label{main_8c_a1884970cc493d8efba5aec28c0d526e7} 
+\index{main.c@{main.c}!HAL\_UART\_RxHalfCpltCallback@{HAL\_UART\_RxHalfCpltCallback}}
+\index{HAL\_UART\_RxHalfCpltCallback@{HAL\_UART\_RxHalfCpltCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxHalfCpltCallback()}{HAL\_UART\_RxHalfCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Rx\+Half\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+Complete Callback de la réception DMA de l\textquotesingle{}UART \Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+Récupère les infos du LIDAR
+
+Récupère l\textquotesingle{}état du LIDAR
+
+Création de la tache LIDAR
+
+Création de la tache MOTEUR
+
+Initialise la tache capt
+
+Démarrage du LIDAR
+
+Initialisation
+
+Codeur
+
+Lancement du scheduler\Hypertarget{main_8c_abade755e13d07c10889ae83143656158}\label{main_8c_abade755e13d07c10889ae83143656158} 
+\index{main.c@{main.c}!MX\_FREERTOS\_Init@{MX\_FREERTOS\_Init}}
+\index{MX\_FREERTOS\_Init@{MX\_FREERTOS\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_FREERTOS\_Init()}{MX\_FREERTOS\_Init()}}
+{\footnotesize\ttfamily void MX\+\_\+\+FREERTOS\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Free\+RTOS initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Valeur retournée lors de la création des taches. 
+
+System Clock Configuration.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks\Hypertarget{main_8c_a46242b93b930a56eaf9544b22267766e}\label{main_8c_a46242b93b930a56eaf9544b22267766e} 
+\index{main.c@{main.c}!TaskLIDAR@{TaskLIDAR}}
+\index{TaskLIDAR@{TaskLIDAR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TaskLIDAR()}{TaskLIDAR()}}
+{\footnotesize\ttfamily void Task\+LIDAR (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Tache du LIDAR Semaphore du DMA Half Callback
+
+Réponse à la commande SCAN pour connaitre le début et la fin des trames
+
+Séparations des différentes trames et récupérations des valeurs
+
+Calcul du nouvel index de fin de trame
+
+On récupère les différents points
+
+On filtre ces points
+
+On regroupe ces points
+
+Envoi du/des points sur l\textquotesingle{}UART pour pouvoir les tracer via le programme python
+
+Calcul des rapports cycliques des moteurs pour suivre ou fuir le robot le plus proche en vonction de la valeur de hunter\Hypertarget{main_8c_a9e4ef147e448c2924cffb0ccdc1ef8c7}\label{main_8c_a9e4ef147e448c2924cffb0ccdc1ef8c7} 
+\index{main.c@{main.c}!TaskMOTOR@{TaskMOTOR}}
+\index{TaskMOTOR@{TaskMOTOR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TaskMOTOR()}{TaskMOTOR()}}
+{\footnotesize\ttfamily void Task\+MOTOR (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Tache appliquant les rapports cyclique calculés dans la tache LIDAR aux moteurs toutes les 50 ms \Hypertarget{main_8c_a9816a9477da5809368133870b88f43c4}\label{main_8c_a9816a9477da5809368133870b88f43c4} 
+\index{main.c@{main.c}!uart\_dma\_receive@{uart\_dma\_receive}}
+\index{uart\_dma\_receive@{uart\_dma\_receive}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{uart\_dma\_receive()}{uart\_dma\_receive()}}
+{\footnotesize\ttfamily int uart\+\_\+dma\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+DMA receive sur l\textquotesingle{}UART4 \Hypertarget{main_8c_a577df8e72c1f0dcc8898a3b44e84cda2}\label{main_8c_a577df8e72c1f0dcc8898a3b44e84cda2} 
+\index{main.c@{main.c}!uart\_dma\_transmit@{uart\_dma\_transmit}}
+\index{uart\_dma\_transmit@{uart\_dma\_transmit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{uart\_dma\_transmit()}{uart\_dma\_transmit()}}
+{\footnotesize\ttfamily int uart\+\_\+dma\+\_\+transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+DMA transmit sur l\textquotesingle{}UART4 \Hypertarget{main_8c_a453ce1561e859194a9798ea1f55c16fd}\label{main_8c_a453ce1561e859194a9798ea1f55c16fd} 
+\index{main.c@{main.c}!uart\_it\_receive@{uart\_it\_receive}}
+\index{uart\_it\_receive@{uart\_it\_receive}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{uart\_it\_receive()}{uart\_it\_receive()}}
+{\footnotesize\ttfamily int uart\+\_\+it\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Interrupt receive sur l\textquotesingle{}UART4 \Hypertarget{main_8c_a135d680796efb8569095da19fad11cfd}\label{main_8c_a135d680796efb8569095da19fad11cfd} 
+\index{main.c@{main.c}!uart\_it\_transmit@{uart\_it\_transmit}}
+\index{uart\_it\_transmit@{uart\_it\_transmit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{uart\_it\_transmit()}{uart\_it\_transmit()}}
+{\footnotesize\ttfamily int uart\+\_\+it\+\_\+transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Interrupt transmit sur l\textquotesingle{}UART4 \Hypertarget{main_8c_a665e8b8ea6d4cd7df848de9bef57159d}\label{main_8c_a665e8b8ea6d4cd7df848de9bef57159d} 
+\index{main.c@{main.c}!uart\_poll\_receive@{uart\_poll\_receive}}
+\index{uart\_poll\_receive@{uart\_poll\_receive}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{uart\_poll\_receive()}{uart\_poll\_receive()}}
+{\footnotesize\ttfamily int uart\+\_\+poll\+\_\+receive (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Polling receive sur l\textquotesingle{}UART4 \Hypertarget{main_8c_ae88be83014fec1b28ac0740e288aca1e}\label{main_8c_ae88be83014fec1b28ac0740e288aca1e} 
+\index{main.c@{main.c}!uart\_transmit@{uart\_transmit}}
+\index{uart\_transmit@{uart\_transmit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{uart\_transmit()}{uart\_transmit()}}
+{\footnotesize\ttfamily int uart\+\_\+transmit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+data,  }\item[{uint16\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Polling transmit sur l\textquotesingle{}UART4 

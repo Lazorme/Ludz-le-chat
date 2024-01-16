@@ -1,0 +1,334 @@
+\doxysection{Code\+\_\+\+Chat\+\_\+\+V4.0/drv\+\_\+\+LIDAR/drv\+\_\+\+LIDAR.h File Reference}
+\hypertarget{drv___l_i_d_a_r_8h}{}\label{drv___l_i_d_a_r_8h}\index{Code\_Chat\_V4.0/drv\_LIDAR/drv\_LIDAR.h@{Code\_Chat\_V4.0/drv\_LIDAR/drv\_LIDAR.h}}
+
+
+Définition des structures et des fonctions pour le driver du LIDAR.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}math.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_i_d_a_r__serial__drv__struct}{LIDAR\+\_\+serial\+\_\+drv\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure décrivant le driver série du LIDAR. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_l_i_d_a_r__health__stat__struct}{LIDAR\+\_\+health\+\_\+stat\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure décrivant l\textquotesingle{}état du LIDAR. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_l_i_d_a_r__device__info__struct}{LIDAR\+\_\+device\+\_\+info\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure décrivant les informations du LIDAR. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_l_i_d_a_r__cluster__struct}{LIDAR\+\_\+cluster\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure pour stocker les informations sur un cluster. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_l_i_d_a_r__processing__struct}{LIDAR\+\_\+processing\+\_\+struct}}
+\begin{DoxyCompactList}\small\item\em Structure pour le traitement des trames du LIDAR. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+struct}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a8c8dd361b7cfe9a2950071de99c77377}\label{drv___l_i_d_a_r_8h_a8c8dd361b7cfe9a2950071de99c77377} 
+\#define {\bfseries INFO\+\_\+\+BUFF\+\_\+\+SIZE}~27
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_acc276d20f0ac6e4f76844461d22c0455}\label{drv___l_i_d_a_r_8h_acc276d20f0ac6e4f76844461d22c0455} 
+\#define {\bfseries HEALTH\+\_\+\+BUFF\+\_\+\+SIZE}~10
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a8e3a929ca84c198906db175852672ab6}\label{drv___l_i_d_a_r_8h_a8e3a929ca84c198906db175852672ab6} 
+\#define {\bfseries CMD\+\_\+\+BUFF\+\_\+\+SIZE}~2
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_abb5cf6bfc6ded05d65ff41396f8a93b8}\label{drv___l_i_d_a_r_8h_abb5cf6bfc6ded05d65ff41396f8a93b8} 
+\#define {\bfseries DATA\+\_\+\+BUFF\+\_\+\+SIZE}~4000
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a7130276201110e0df6852573fe323de6}\label{drv___l_i_d_a_r_8h_a7130276201110e0df6852573fe323de6} 
+\#define {\bfseries FRAME\+\_\+\+BUFF\+\_\+\+SIZE}~90
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a7b28e6ecab214602478fb9fe0b63df64}\label{drv___l_i_d_a_r_8h_a7b28e6ecab214602478fb9fe0b63df64} 
+\#define {\bfseries POINT\+\_\+\+BUFF\+\_\+\+SIZE}~360
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a046e77b9815d0d4355a747c1ffde39f7}\label{drv___l_i_d_a_r_8h_a046e77b9815d0d4355a747c1ffde39f7} 
+\#define {\bfseries NB\+\_\+\+DEGRES}~360
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_ac107b668710052fba3535b6646b531c3}\label{drv___l_i_d_a_r_8h_ac107b668710052fba3535b6646b531c3} 
+\#define {\bfseries CLUSTER\+\_\+\+SEUIL}~150
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a231540ba1b10424f75fb0a8329acd411}\label{drv___l_i_d_a_r_8h_a231540ba1b10424f75fb0a8329acd411} 
+typedef enum \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95c}{LIDAR\+\_\+command\+\_\+enum}} {\bfseries LIDAR\+\_\+command\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Enumération des commandes du LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a43cbada6790558c0337e0d7c2d1a38d5}\label{drv___l_i_d_a_r_8h_a43cbada6790558c0337e0d7c2d1a38d5} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries LIDAR\+\_\+transmit\+\_\+drv\+\_\+t}) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Fonctions de transmission pour le LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a7b7cdabd233bc4b0c8d3be727bf8929c}\label{drv___l_i_d_a_r_8h_a7b7cdabd233bc4b0c8d3be727bf8929c} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries LIDAR\+\_\+it\+\_\+transmit\+\_\+drv\+\_\+t}) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_afe4aedcb1362a314ce3bb528d608e1ff}\label{drv___l_i_d_a_r_8h_afe4aedcb1362a314ce3bb528d608e1ff} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries LIDAR\+\_\+dma\+\_\+transmit\+\_\+drv\+\_\+t}) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a8d0b3f4d1cd16ccaaa337739e9f73844}\label{drv___l_i_d_a_r_8h_a8d0b3f4d1cd16ccaaa337739e9f73844} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries LIDAR\+\_\+poll\+\_\+receive\+\_\+drv\+\_\+t}) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Fonctions de réception pour le LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a52e4799bf9fcc8101d889c3020ef4928}\label{drv___l_i_d_a_r_8h_a52e4799bf9fcc8101d889c3020ef4928} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries LIDAR\+\_\+it\+\_\+receive\+\_\+drv\+\_\+t}) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a312c6aac39fe9f7d443425f98cb37c66}\label{drv___l_i_d_a_r_8h_a312c6aac39fe9f7d443425f98cb37c66} 
+typedef int(\texorpdfstring{$\ast$}{*} {\bfseries LIDAR\+\_\+\+DMA\+\_\+receive\+\_\+drv\+\_\+t}) (uint8\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+data, uint16\+\_\+t size)
+\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a5c6e67276e02cb691fe822a06c0910ba}\label{drv___l_i_d_a_r_8h_a5c6e67276e02cb691fe822a06c0910ba} 
+typedef struct \mbox{\hyperlink{struct_l_i_d_a_r__serial__drv__struct}{LIDAR\+\_\+serial\+\_\+drv\+\_\+struct}} {\bfseries LIDAR\+\_\+serial\+\_\+drv\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure décrivant le driver série du LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_ac5ebb7d25e5b9f75517586be1f52944c}\label{drv___l_i_d_a_r_8h_ac5ebb7d25e5b9f75517586be1f52944c} 
+typedef struct \mbox{\hyperlink{struct_l_i_d_a_r__health__stat__struct}{LIDAR\+\_\+health\+\_\+stat\+\_\+struct}} {\bfseries LIDAR\+\_\+health\+\_\+stat\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure décrivant l\textquotesingle{}état du LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a3c1297b378c95898b6311cf17c7f23cc}\label{drv___l_i_d_a_r_8h_a3c1297b378c95898b6311cf17c7f23cc} 
+typedef struct \mbox{\hyperlink{struct_l_i_d_a_r__device__info__struct}{LIDAR\+\_\+device\+\_\+info\+\_\+struct}} {\bfseries LIDAR\+\_\+device\+\_\+info\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure décrivant les informations du LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a8adbf2acb66573922abd6da94533ec7e}\label{drv___l_i_d_a_r_8h_a8adbf2acb66573922abd6da94533ec7e} 
+typedef struct \mbox{\hyperlink{struct_l_i_d_a_r__cluster__struct}{LIDAR\+\_\+cluster\+\_\+struct}} {\bfseries LIDAR\+\_\+cluster\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure pour stocker les informations sur un cluster. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_a4045b1a41b654a144848b7d3977e00bc}\label{drv___l_i_d_a_r_8h_a4045b1a41b654a144848b7d3977e00bc} 
+typedef struct \mbox{\hyperlink{struct_l_i_d_a_r__processing__struct}{LIDAR\+\_\+processing\+\_\+struct}} {\bfseries LIDAR\+\_\+processing\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Structure pour le traitement des trames du LIDAR. \end{DoxyCompactList}\item 
+\Hypertarget{drv___l_i_d_a_r_8h_af1f02358ab861000e728138203f60326}\label{drv___l_i_d_a_r_8h_af1f02358ab861000e728138203f60326} 
+typedef struct \mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+struct}} {\bfseries h\+\_\+\+LIDAR\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95c}{LIDAR\+\_\+command\+\_\+enum}} \{ \newline
+\mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca0b1882463452a9b63bc4403123dbda2a}{CMD\+\_\+\+BEGIN}} = 0x\+A5
+, \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95caf2e188a52388c10d5e2f48ca37b28287}{CMD\+\_\+\+START}} = 0x60
+, \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca1e0ceff2d6f13742786f42dac58149bc}{CMD\+\_\+\+STOP}} = 0x65
+, \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6b1ac29fd084fc49f7c5c5e80130614b}{CMD\+\_\+\+INFO}} = 0x90
+, \newline
+\mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6269e4a5a89a4d74bbf165cfe5d9676a}{CMD\+\_\+\+HEALTH}} = 0x91
+, \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca77722fde3ff0433651c0b36f3211d258}{CMD\+\_\+\+RESTART}} = 0x80
+ \}
+\begin{DoxyCompactList}\small\item\em Enumération des commandes du LIDAR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{drv___l_i_d_a_r_8h_a89c0491fa4d18856da831a9e76376a4b}{LIDAR\+\_\+start}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\+\_\+\+LIDAR}})
+\begin{DoxyCompactList}\small\item\em Démarre le balayage et exporte les données du nuage de points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drv___l_i_d_a_r_8h_a3a25b63d51d2dc067788becd442d176d}{LIDAR\+\_\+stop}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\+\_\+\+LIDAR}})
+\begin{DoxyCompactList}\small\item\em Arrête le balayage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drv___l_i_d_a_r_8h_a12c270b3c8cdd54a50881e41b0dfe08c}{LIDAR\+\_\+get\+\_\+info}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\+\_\+\+LIDAR}})
+\begin{DoxyCompactList}\small\item\em Obtient les informations du dispositif LIDAR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drv___l_i_d_a_r_8h_a248eba1785fdbb749cd1eced7ceaf879}{LIDAR\+\_\+get\+\_\+health\+\_\+stat}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\+\_\+\+LIDAR}})
+\begin{DoxyCompactList}\small\item\em Obtient l\textquotesingle{}état de santé du dispositif LIDAR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drv___l_i_d_a_r_8h_ae2c51600134ab57bf9a0c802b9597cc1}{LIDAR\+\_\+restart}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\+\_\+\+LIDAR}})
+\begin{DoxyCompactList}\small\item\em Effectue un redémarrage logiciel du dispositif LIDAR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drv___l_i_d_a_r_8h_a8f50f9a984d9c6f9efb72074dac2056b}{LIDAR\+\_\+process\+\_\+frame}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}LIDAR)
+\begin{DoxyCompactList}\small\item\em Traite une trame reçue du LIDAR. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{drv___l_i_d_a_r_8h_af1eecdf680e4f9c453a7486728fa95b1}{calculer\+\_\+distance\+\_\+moyenne}} (int distances\mbox{[}$\,$\mbox{]}, int debut, int fin)
+\begin{DoxyCompactList}\small\item\em Calcule la distance moyenne à partir d\textquotesingle{}un tableau de distances. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drv___l_i_d_a_r_8h_a5583ed54b0d32192cb5e8c2d30b28f24}{find\+\_\+clusters}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}LIDAR)
+\begin{DoxyCompactList}\small\item\em Trouve les clusters dans les données du LIDAR. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{drv___l_i_d_a_r_8h_a254756fa90345b5f99cd399c0563319f}{median\+Filter}} (\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}LIDAR)
+\begin{DoxyCompactList}\small\item\em Applique un filtre médian aux données du LIDAR. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Définition des structures et des fonctions pour le driver du LIDAR. 
+
+\begin{DoxyAuthor}{Author}
+Tom CHARBONNEAU 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95c}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95c} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_command\_enum@{LIDAR\_command\_enum}}
+\index{LIDAR\_command\_enum@{LIDAR\_command\_enum}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_command\_enum}{LIDAR\_command\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95c}{LIDAR\+\_\+command\+\_\+enum}}}
+
+
+
+Enumération des commandes du LIDAR. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_BEGIN@{CMD\_BEGIN}!drv\_LIDAR.h@{drv\_LIDAR.h}}\index{drv\_LIDAR.h@{drv\_LIDAR.h}!CMD\_BEGIN@{CMD\_BEGIN}}}\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca0b1882463452a9b63bc4403123dbda2a}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca0b1882463452a9b63bc4403123dbda2a} 
+CMD\+\_\+\+BEGIN&Premier octet de la commande \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_START@{CMD\_START}!drv\_LIDAR.h@{drv\_LIDAR.h}}\index{drv\_LIDAR.h@{drv\_LIDAR.h}!CMD\_START@{CMD\_START}}}\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95caf2e188a52388c10d5e2f48ca37b28287}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95caf2e188a52388c10d5e2f48ca37b28287} 
+CMD\+\_\+\+START&Démarrer le balayage et exporter les données du nuage de points \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_STOP@{CMD\_STOP}!drv\_LIDAR.h@{drv\_LIDAR.h}}\index{drv\_LIDAR.h@{drv\_LIDAR.h}!CMD\_STOP@{CMD\_STOP}}}\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca1e0ceff2d6f13742786f42dac58149bc}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca1e0ceff2d6f13742786f42dac58149bc} 
+CMD\+\_\+\+STOP&Arrêter le balayage \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_INFO@{CMD\_INFO}!drv\_LIDAR.h@{drv\_LIDAR.h}}\index{drv\_LIDAR.h@{drv\_LIDAR.h}!CMD\_INFO@{CMD\_INFO}}}\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6b1ac29fd084fc49f7c5c5e80130614b}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6b1ac29fd084fc49f7c5c5e80130614b} 
+CMD\+\_\+\+INFO&Obtenir les informations sur le dispositif (modèle, firmware, version matérielle) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_HEALTH@{CMD\_HEALTH}!drv\_LIDAR.h@{drv\_LIDAR.h}}\index{drv\_LIDAR.h@{drv\_LIDAR.h}!CMD\_HEALTH@{CMD\_HEALTH}}}\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6269e4a5a89a4d74bbf165cfe5d9676a}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6269e4a5a89a4d74bbf165cfe5d9676a} 
+CMD\+\_\+\+HEALTH&Obtenir l\textquotesingle{}état de santé du dispositif \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_RESTART@{CMD\_RESTART}!drv\_LIDAR.h@{drv\_LIDAR.h}}\index{drv\_LIDAR.h@{drv\_LIDAR.h}!CMD\_RESTART@{CMD\_RESTART}}}\Hypertarget{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca77722fde3ff0433651c0b36f3211d258}\label{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca77722fde3ff0433651c0b36f3211d258} 
+CMD\+\_\+\+RESTART&Redémarrage logiciel \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{drv___l_i_d_a_r_8h_af1eecdf680e4f9c453a7486728fa95b1}\label{drv___l_i_d_a_r_8h_af1eecdf680e4f9c453a7486728fa95b1} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!calculer\_distance\_moyenne@{calculer\_distance\_moyenne}}
+\index{calculer\_distance\_moyenne@{calculer\_distance\_moyenne}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{calculer\_distance\_moyenne()}{calculer\_distance\_moyenne()}}
+{\footnotesize\ttfamily int calculer\+\_\+distance\+\_\+moyenne (\begin{DoxyParamCaption}\item[{int}]{distances\mbox{[}$\,$\mbox{]},  }\item[{int}]{debut,  }\item[{int}]{fin }\end{DoxyParamCaption})}
+
+
+
+Calcule la distance moyenne à partir d\textquotesingle{}un tableau de distances. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distances} & Tableau des distances. \\
+\hline
+{\em debut} & Index de début. \\
+\hline
+{\em fin} & Index de fin. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Distance moyenne. 
+\end{DoxyReturn}
+\Hypertarget{drv___l_i_d_a_r_8h_a5583ed54b0d32192cb5e8c2d30b28f24}\label{drv___l_i_d_a_r_8h_a5583ed54b0d32192cb5e8c2d30b28f24} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!find\_clusters@{find\_clusters}}
+\index{find\_clusters@{find\_clusters}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{find\_clusters()}{find\_clusters()}}
+{\footnotesize\ttfamily void find\+\_\+clusters (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{LIDAR }\end{DoxyParamCaption})}
+
+
+
+Trouve les clusters dans les données du LIDAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{drv___l_i_d_a_r_8h_a248eba1785fdbb749cd1eced7ceaf879}\label{drv___l_i_d_a_r_8h_a248eba1785fdbb749cd1eced7ceaf879} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_get\_health\_stat@{LIDAR\_get\_health\_stat}}
+\index{LIDAR\_get\_health\_stat@{LIDAR\_get\_health\_stat}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_get\_health\_stat()}{LIDAR\_get\_health\_stat()}}
+{\footnotesize\ttfamily int LIDAR\+\_\+get\+\_\+health\+\_\+stat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h\+\_\+\+LIDAR }\end{DoxyParamCaption})}
+
+
+
+Obtient l\textquotesingle{}état de santé du dispositif LIDAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+\+LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, autre en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{drv___l_i_d_a_r_8h_a12c270b3c8cdd54a50881e41b0dfe08c}\label{drv___l_i_d_a_r_8h_a12c270b3c8cdd54a50881e41b0dfe08c} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_get\_info@{LIDAR\_get\_info}}
+\index{LIDAR\_get\_info@{LIDAR\_get\_info}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_get\_info()}{LIDAR\_get\_info()}}
+{\footnotesize\ttfamily int LIDAR\+\_\+get\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h\+\_\+\+LIDAR }\end{DoxyParamCaption})}
+
+
+
+Obtient les informations du dispositif LIDAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+\+LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, autre en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{drv___l_i_d_a_r_8h_a8f50f9a984d9c6f9efb72074dac2056b}\label{drv___l_i_d_a_r_8h_a8f50f9a984d9c6f9efb72074dac2056b} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_process\_frame@{LIDAR\_process\_frame}}
+\index{LIDAR\_process\_frame@{LIDAR\_process\_frame}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_process\_frame()}{LIDAR\_process\_frame()}}
+{\footnotesize\ttfamily void LIDAR\+\_\+process\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{LIDAR }\end{DoxyParamCaption})}
+
+
+
+Traite une trame reçue du LIDAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{drv___l_i_d_a_r_8h_ae2c51600134ab57bf9a0c802b9597cc1}\label{drv___l_i_d_a_r_8h_ae2c51600134ab57bf9a0c802b9597cc1} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_restart@{LIDAR\_restart}}
+\index{LIDAR\_restart@{LIDAR\_restart}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_restart()}{LIDAR\_restart()}}
+{\footnotesize\ttfamily int LIDAR\+\_\+restart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h\+\_\+\+LIDAR }\end{DoxyParamCaption})}
+
+
+
+Effectue un redémarrage logiciel du dispositif LIDAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+\+LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, autre en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{drv___l_i_d_a_r_8h_a89c0491fa4d18856da831a9e76376a4b}\label{drv___l_i_d_a_r_8h_a89c0491fa4d18856da831a9e76376a4b} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_start@{LIDAR\_start}}
+\index{LIDAR\_start@{LIDAR\_start}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_start()}{LIDAR\_start()}}
+{\footnotesize\ttfamily int LIDAR\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h\+\_\+\+LIDAR }\end{DoxyParamCaption})}
+
+
+
+Démarre le balayage et exporte les données du nuage de points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+\+LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, autre en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{drv___l_i_d_a_r_8h_a3a25b63d51d2dc067788becd442d176d}\label{drv___l_i_d_a_r_8h_a3a25b63d51d2dc067788becd442d176d} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!LIDAR\_stop@{LIDAR\_stop}}
+\index{LIDAR\_stop@{LIDAR\_stop}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{LIDAR\_stop()}{LIDAR\_stop()}}
+{\footnotesize\ttfamily int LIDAR\+\_\+stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{h\+\_\+\+LIDAR }\end{DoxyParamCaption})}
+
+
+
+Arrête le balayage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h\+\_\+\+LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 en cas de succès, autre en cas d\textquotesingle{}erreur. 
+\end{DoxyReturn}
+\Hypertarget{drv___l_i_d_a_r_8h_a254756fa90345b5f99cd399c0563319f}\label{drv___l_i_d_a_r_8h_a254756fa90345b5f99cd399c0563319f} 
+\index{drv\_LIDAR.h@{drv\_LIDAR.h}!medianFilter@{medianFilter}}
+\index{medianFilter@{medianFilter}!drv\_LIDAR.h@{drv\_LIDAR.h}}
+\doxysubsubsection{\texorpdfstring{medianFilter()}{medianFilter()}}
+{\footnotesize\ttfamily void median\+Filter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\+\_\+\+LIDAR\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{LIDAR }\end{DoxyParamCaption})}
+
+
+
+Applique un filtre médian aux données du LIDAR. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LIDAR} & Pointeur vers la structure h\+\_\+\+LIDAR\+\_\+t. \\
+\hline
+\end{DoxyParams}

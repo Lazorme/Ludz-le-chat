@@ -1,0 +1,48 @@
+\doxysection{control.\+h}
+\hypertarget{control_8h_source}{}\label{control_8h_source}\index{Code\_Chat\_V4.0/drv\_Motor/control.h@{Code\_Chat\_V4.0/drv\_Motor/control.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ *\ control.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ *\ \ Created\ on:\ Nov\ 30,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ *\ \ \ \ \ \ Author:\ serva}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ */}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DRV\_MOTOR\_Controle\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DRV\_MOTOR\_Controle\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tim_8h}{tim.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpio_8h}{gpio.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}sensor.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}pwm.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{drv___l_i_d_a_r_8h}{drv\_LIDAR.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//typedef\ struct\ \_\_MotorControl\_HandleTypedef\{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ Codeur\_HandleTypeDef\ hcodeur;}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ Motor\_HandleTypeDef\ Motor;}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ int\ b0;}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ int\ b1;}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ int\ b2;}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ \ int\ time\_index;}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ int\ speed\_command[32];}}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ int\ speed\_codeur[32];}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ \ int\ speed\_error[32];}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ int\ setpoint;}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//\}MotorControl\_HandleTypeDef;}}
+\DoxyCodeLine{00030\ \textcolor{comment}{//}}
+\DoxyCodeLine{00031\ \textcolor{comment}{//}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//extern\ MotorControl\_HandleTypeDef\ MotorControlLeft;}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//extern\ MotorControl\_HandleTypeDef\ MotorControlRight;}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//void\ motorControlInit(MotorControl\_HandleTypeDef\ *MotorControl,Motor\_HandleTypeDef\ *Motor,Codeur\_HandleTypeDef\ *hcodeur,int\ k,int\ ki);}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//void\ motorControl(MotorControl\_HandleTypeDef\ *MotorControl);}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//void\ follow(int\ lidarbuffer,MotorControl\_HandleTypeDef\ *MotorControlLeft,MotorControl\_HandleTypeDef\ *MotorControlRight);}}
+\DoxyCodeLine{00038\ \textcolor{comment}{//void\ matrixProduct(int\ result[ROWS\_M1],\ int\ weights[ROWS\_M1][COLS\_M1],\ int\ inputs[COLS\_M1],\ int\ bias);}}
+\DoxyCodeLine{00039\ \textcolor{comment}{//}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ angle\_inverse(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a63177970cacb40efba67ce501ea89210}{angle}});}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ ajusterAlphaMoteurs(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a63177970cacb40efba67ce501ea89210}{angle}},\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a4b512d0a6dcc3c7d7e6dd9a7714852c4}{vitesse}},\ \mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}}\ *\mbox{\hyperlink{main_8c_a88ea50f1bb5d3a04605cb1e11b4ae19b}{motor1}},\ \mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}}\ *\mbox{\hyperlink{main_8c_a9dbe1f9be9ba60026817fc63ce4b677b}{motor2}});}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DRV\_MOTOR\_Control\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

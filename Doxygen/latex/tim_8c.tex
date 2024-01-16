@@ -1,0 +1,116 @@
+\doxysection{Code\+\_\+\+Chat\+\_\+\+V4.0/\+Core/\+Src/tim.c File Reference}
+\hypertarget{tim_8c}{}\label{tim_8c}\index{Code\_Chat\_V4.0/Core/Src/tim.c@{Code\_Chat\_V4.0/Core/Src/tim.c}}
+
+
+This file provides code for the configuration of the TIM instances.  
+
+
+{\ttfamily \#include "{}tim.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tim_8c_ad1f9d42690163f73f73e5b820c81ca14}\label{tim_8c_ad1f9d42690163f73f73e5b820c81ca14} 
+void {\bfseries MX\+\_\+\+TIM1\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_a7912f2916786a2c33cb6fb8259ade58c}\label{tim_8c_a7912f2916786a2c33cb6fb8259ade58c} 
+void {\bfseries MX\+\_\+\+TIM3\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_abbf5454212cb039fb90d523b2473af91}\label{tim_8c_abbf5454212cb039fb90d523b2473af91} 
+void {\bfseries MX\+\_\+\+TIM6\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_a34e45e5fe68cc66a86b26df2da7e18b4}\label{tim_8c_a34e45e5fe68cc66a86b26df2da7e18b4} 
+void {\bfseries MX\+\_\+\+TIM14\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_ac4b6b63257bb307dd93a4d5f45e39172}\label{tim_8c_ac4b6b63257bb307dd93a4d5f45e39172} 
+void {\bfseries MX\+\_\+\+TIM15\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_ac648e7f125deef46d41cd8b3f632efe0}\label{tim_8c_ac648e7f125deef46d41cd8b3f632efe0} 
+void {\bfseries MX\+\_\+\+TIM16\+\_\+\+Init} (void)
+\item 
+\Hypertarget{tim_8c_af7d58ba47b8cffa9bf63d7021a7d5d77}\label{tim_8c_af7d58ba47b8cffa9bf63d7021a7d5d77} 
+void {\bfseries MX\+\_\+\+TIM17\+\_\+\+Init} (void)
+\item 
+void \mbox{\hyperlink{tim_8c_ac9447b4beb065a4630e94c133d7fd97c}{HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Msp\+Init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+encoder\+Handle)
+\item 
+\Hypertarget{tim_8c_a59716af159bfbbb6023b31354fb23af8}\label{tim_8c_a59716af159bfbbb6023b31354fb23af8} 
+void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+Init} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+base\+Handle)
+\item 
+\Hypertarget{tim_8c_acc04a9bb2813334b6e3585d1f16e5199}\label{tim_8c_acc04a9bb2813334b6e3585d1f16e5199} 
+void {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Msp\+Init} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+pwm\+Handle)
+\item 
+void \mbox{\hyperlink{tim_8c_a708f19bbc41b292fccf38f2d9796c46a}{HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+Handle)
+\item 
+void \mbox{\hyperlink{tim_8c_aa45a7ed70c5190ddc921cc667a00e801}{HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Msp\+De\+Init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+encoder\+Handle)
+\item 
+\Hypertarget{tim_8c_adee8ed7d3ebb3a217c27ac10af86ce2f}\label{tim_8c_adee8ed7d3ebb3a217c27ac10af86ce2f} 
+void {\bfseries HAL\+\_\+\+TIM\+\_\+\+Base\+\_\+\+Msp\+De\+Init} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+base\+Handle)
+\item 
+\Hypertarget{tim_8c_ab862d9bf6ab68a9201719c992c3f4b43}\label{tim_8c_ab862d9bf6ab68a9201719c992c3f4b43} 
+void {\bfseries HAL\+\_\+\+TIM\+\_\+\+PWM\+\_\+\+Msp\+De\+Init} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}tim\+\_\+pwm\+Handle)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tim_8c_a25fc663547539bc49fecc0011bd76ab5}\label{tim_8c_a25fc663547539bc49fecc0011bd76ab5} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim1}
+\item 
+\Hypertarget{tim_8c_aac3d2c59ee0e3bbae1b99529a154eb62}\label{tim_8c_aac3d2c59ee0e3bbae1b99529a154eb62} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim3}
+\item 
+\Hypertarget{tim_8c_a1564492831a79fa18466467c3420c3c3}\label{tim_8c_a1564492831a79fa18466467c3420c3c3} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim6}
+\item 
+\Hypertarget{tim_8c_ae4b8faf50eeb07577983d36e4c3894b8}\label{tim_8c_ae4b8faf50eeb07577983d36e4c3894b8} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim14}
+\item 
+\Hypertarget{tim_8c_a859a9bb217bb4010bb2bffb6881478c0}\label{tim_8c_a859a9bb217bb4010bb2bffb6881478c0} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim15}
+\item 
+\Hypertarget{tim_8c_af0bea8d8759a0d7e0e296edc9f5d6936}\label{tim_8c_af0bea8d8759a0d7e0e296edc9f5d6936} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim16}
+\item 
+\Hypertarget{tim_8c_a51c6d0c070f8c00f33ee08b4f1eb6e90}\label{tim_8c_a51c6d0c070f8c00f33ee08b4f1eb6e90} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim17}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file provides code for the configuration of the TIM instances. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2024 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tim_8c_aa45a7ed70c5190ddc921cc667a00e801}\label{tim_8c_aa45a7ed70c5190ddc921cc667a00e801} 
+\index{tim.c@{tim.c}!HAL\_TIM\_Encoder\_MspDeInit@{HAL\_TIM\_Encoder\_MspDeInit}}
+\index{HAL\_TIM\_Encoder\_MspDeInit@{HAL\_TIM\_Encoder\_MspDeInit}!tim.c@{tim.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_Encoder\_MspDeInit()}{HAL\_TIM\_Encoder\_MspDeInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{tim\+\_\+encoder\+Handle }\end{DoxyParamCaption})}
+
+TIM1 GPIO Configuration PA8 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH1 PA9 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH2
+
+TIM3 GPIO Configuration PC6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH1 PC7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH2\Hypertarget{tim_8c_ac9447b4beb065a4630e94c133d7fd97c}\label{tim_8c_ac9447b4beb065a4630e94c133d7fd97c} 
+\index{tim.c@{tim.c}!HAL\_TIM\_Encoder\_MspInit@{HAL\_TIM\_Encoder\_MspInit}}
+\index{HAL\_TIM\_Encoder\_MspInit@{HAL\_TIM\_Encoder\_MspInit}!tim.c@{tim.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_Encoder\_MspInit()}{HAL\_TIM\_Encoder\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Encoder\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{tim\+\_\+encoder\+Handle }\end{DoxyParamCaption})}
+
+TIM1 GPIO Configuration PA8 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH1 PA9 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH2
+
+TIM3 GPIO Configuration PC6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH1 PC7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH2\Hypertarget{tim_8c_a708f19bbc41b292fccf38f2d9796c46a}\label{tim_8c_a708f19bbc41b292fccf38f2d9796c46a} 
+\index{tim.c@{tim.c}!HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}}
+\index{HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}!tim.c@{tim.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_MspPostInit()}{HAL\_TIM\_MspPostInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{tim\+Handle }\end{DoxyParamCaption})}
+
+TIM14 GPIO Configuration PC12 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM14\+\_\+\+CH1
+
+TIM15 GPIO Configuration PC1 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM15\+\_\+\+CH1 PC2 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM15\+\_\+\+CH2
+
+TIM16 GPIO Configuration PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM16\+\_\+\+CH1
+
+TIM17 GPIO Configuration PA7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM17\+\_\+\+CH1

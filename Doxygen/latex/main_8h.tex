@@ -1,0 +1,269 @@
+\doxysection{Code\+\_\+\+Chat\+\_\+\+V4.0/\+Core/\+Inc/main.h File Reference}
+\hypertarget{main_8h}{}\label{main_8h}\index{Code\_Chat\_V4.0/Core/Inc/main.h@{Code\_Chat\_V4.0/Core/Inc/main.h}}
+
+
+\+: Header for \doxylink{main_8c}{main.\+c} file. This file contains the common defines of the application.  
+
+
+{\ttfamily \#include "{}stm32g0xx\+\_\+hal.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8h_a5dc670e74c2965d34f6f2481f8909155}\label{main_8h_a5dc670e74c2965d34f6f2481f8909155} 
+\#define {\bfseries USART4\+\_\+\+RX\+\_\+\+LIDAR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+11
+\item 
+\Hypertarget{main_8h_a2a86762e6b01f13ac627b008504ba8d1}\label{main_8h_a2a86762e6b01f13ac627b008504ba8d1} 
+\#define {\bfseries USART4\+\_\+\+RX\+\_\+\+LIDAR\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a040f2ea702c849f316f51d6e5e31fe5b}\label{main_8h_a040f2ea702c849f316f51d6e5e31fe5b} 
+\#define {\bfseries PWM\+\_\+\+MOT\+\_\+\+LIDAR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+12
+\item 
+\Hypertarget{main_8h_a422156de7f6b062559677d8222c4f109}\label{main_8h_a422156de7f6b062559677d8222c4f109} 
+\#define {\bfseries PWM\+\_\+\+MOT\+\_\+\+LIDAR\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a3a1f274f33bba3882c850d792b2649a9}\label{main_8h_a3a1f274f33bba3882c850d792b2649a9} 
+\#define {\bfseries Bouton1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\Hypertarget{main_8h_a722f1b800b559f0b50624aae78c0c46f}\label{main_8h_a722f1b800b559f0b50624aae78c0c46f} 
+\#define {\bfseries Bouton1\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_ac8a6ddb1e3303c52bf5758baad1e9187}\label{main_8h_ac8a6ddb1e3303c52bf5758baad1e9187} 
+\#define {\bfseries Bouton1\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI0\+\_\+1\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_ac0627268eff0e6f2d4c5148cd0de9958}\label{main_8h_ac0627268eff0e6f2d4c5148cd0de9958} 
+\#define {\bfseries PWM\+\_\+\+MOT2\+\_\+\+PH1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\Hypertarget{main_8h_aae11cf1884d46bc3823f6e7b1ee95ad1}\label{main_8h_aae11cf1884d46bc3823f6e7b1ee95ad1} 
+\#define {\bfseries PWM\+\_\+\+MOT2\+\_\+\+PH1\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_adc127da6d4c92aaf34253e4f5b2d94a1}\label{main_8h_adc127da6d4c92aaf34253e4f5b2d94a1} 
+\#define {\bfseries PWM\+\_\+\+MOT2\+\_\+\+PH2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+2
+\item 
+\Hypertarget{main_8h_a2ecdbb3aeba19c3dc2a8caec60a7441e}\label{main_8h_a2ecdbb3aeba19c3dc2a8caec60a7441e} 
+\#define {\bfseries PWM\+\_\+\+MOT2\+\_\+\+PH2\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a824c5a81957bcf52845255489082e2b7}\label{main_8h_a824c5a81957bcf52845255489082e2b7} 
+\#define {\bfseries Bouton2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\Hypertarget{main_8h_afede0180c01c13f87330a7be41ca2390}\label{main_8h_afede0180c01c13f87330a7be41ca2390} 
+\#define {\bfseries Bouton2\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_ae3d225de6de9b4e1bd922ea4c58d29a4}\label{main_8h_ae3d225de6de9b4e1bd922ea4c58d29a4} 
+\#define {\bfseries Bouton2\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI2\+\_\+3\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_a3c9473e5f33e8c07e72870c00630f877}\label{main_8h_a3c9473e5f33e8c07e72870c00630f877} 
+\#define {\bfseries ADC\+\_\+\+Shunt1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\Hypertarget{main_8h_a128e88f60ece05c5c004e14396991e64}\label{main_8h_a128e88f60ece05c5c004e14396991e64} 
+\#define {\bfseries ADC\+\_\+\+Shunt1\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a59e8be7ad9a8c31202f8197c5eba9f15}\label{main_8h_a59e8be7ad9a8c31202f8197c5eba9f15} 
+\#define {\bfseries ADC\+\_\+\+Shunt2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\Hypertarget{main_8h_a9c4aa180bc598f903ee3238bb6d4804e}\label{main_8h_a9c4aa180bc598f903ee3238bb6d4804e} 
+\#define {\bfseries ADC\+\_\+\+Shunt2\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a1637453c7047e8e0586b5d560e3dd94a}\label{main_8h_a1637453c7047e8e0586b5d560e3dd94a} 
+\#define {\bfseries Bouton3\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\Hypertarget{main_8h_a21b29f47b34268cebf638225c9e360bf}\label{main_8h_a21b29f47b34268cebf638225c9e360bf} 
+\#define {\bfseries Bouton3\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a1776b5933a669aa62ae6a9987707e921}\label{main_8h_a1776b5933a669aa62ae6a9987707e921} 
+\#define {\bfseries Bouton3\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_aea903d15b7bd6136493c05b643060f9e}\label{main_8h_aea903d15b7bd6136493c05b643060f9e} 
+\#define {\bfseries PWM\+\_\+\+MOT1\+\_\+\+PH1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\Hypertarget{main_8h_a4ed45d6165989537002526e749a57aa1}\label{main_8h_a4ed45d6165989537002526e749a57aa1} 
+\#define {\bfseries PWM\+\_\+\+MOT1\+\_\+\+PH1\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_aef2fb8606b4f2b33ef825369512ac896}\label{main_8h_aef2fb8606b4f2b33ef825369512ac896} 
+\#define {\bfseries PWM\+\_\+\+MOT1\+\_\+\+PH2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\Hypertarget{main_8h_a502d4b62fa9dcd2a6fa7838af32dfb5a}\label{main_8h_a502d4b62fa9dcd2a6fa7838af32dfb5a} 
+\#define {\bfseries PWM\+\_\+\+MOT1\+\_\+\+PH2\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a63930aae6710c6226902a830c4ba31a1}\label{main_8h_a63930aae6710c6226902a830c4ba31a1} 
+\#define {\bfseries USART1\+\_\+\+TX\+\_\+\+Debug\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\Hypertarget{main_8h_a4abd5ca99d66880639dfc7921245dcc1}\label{main_8h_a4abd5ca99d66880639dfc7921245dcc1} 
+\#define {\bfseries USART1\+\_\+\+TX\+\_\+\+Debug\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_ac9c1b4314a61d2c897f52ea133476f1b}\label{main_8h_ac9c1b4314a61d2c897f52ea133476f1b} 
+\#define {\bfseries USART1\+\_\+\+RX\+\_\+\+Debug\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\Hypertarget{main_8h_a1038db7b12ae27f2f7e5e3376527f1dd}\label{main_8h_a1038db7b12ae27f2f7e5e3376527f1dd} 
+\#define {\bfseries USART1\+\_\+\+RX\+\_\+\+Debug\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a8d5d498df85a527cfadedd4bb0d07af0}\label{main_8h_a8d5d498df85a527cfadedd4bb0d07af0} 
+\#define {\bfseries Contact1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+13
+\item 
+\Hypertarget{main_8h_af6cb23314c0fde030b6ae2ec88c67319}\label{main_8h_af6cb23314c0fde030b6ae2ec88c67319} 
+\#define {\bfseries Contact1\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a22b8afabb9878337ae77d11fe1a8b111}\label{main_8h_a22b8afabb9878337ae77d11fe1a8b111} 
+\#define {\bfseries Contact1\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_a923049a52f47e6ab10a1ee215928a8dc}\label{main_8h_a923049a52f47e6ab10a1ee215928a8dc} 
+\#define {\bfseries Contact2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+14
+\item 
+\Hypertarget{main_8h_aa0fc1cec657ab5152338b4e636873847}\label{main_8h_aa0fc1cec657ab5152338b4e636873847} 
+\#define {\bfseries Contact2\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a238abbba6ef571475fef5de45ac26c0e}\label{main_8h_a238abbba6ef571475fef5de45ac26c0e} 
+\#define {\bfseries Contact2\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_ac5958b9d92024ded7869649c54d1011a}\label{main_8h_ac5958b9d92024ded7869649c54d1011a} 
+\#define {\bfseries Contact3\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+15
+\item 
+\Hypertarget{main_8h_a85811628b9cff538887a5997dfe96e95}\label{main_8h_a85811628b9cff538887a5997dfe96e95} 
+\#define {\bfseries Contact3\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_af89bb1cbaf4930350c1f66dfd3f1cc4e}\label{main_8h_af89bb1cbaf4930350c1f66dfd3f1cc4e} 
+\#define {\bfseries Contact3\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_a0b438ec4a6c14159443988329a99f6f2}\label{main_8h_a0b438ec4a6c14159443988329a99f6f2} 
+\#define {\bfseries CODEUR1\+\_\+\+PH1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\Hypertarget{main_8h_ae2299d7a50b24201f7da09e62f1b7594}\label{main_8h_ae2299d7a50b24201f7da09e62f1b7594} 
+\#define {\bfseries CODEUR1\+\_\+\+PH1\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a233cb24ab4a8806c80c10153770dc37c}\label{main_8h_a233cb24ab4a8806c80c10153770dc37c} 
+\#define {\bfseries CODEUR1\+\_\+\+PH2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\Hypertarget{main_8h_a99245712a6be736257e45a084b0f9b29}\label{main_8h_a99245712a6be736257e45a084b0f9b29} 
+\#define {\bfseries CODEUR1\+\_\+\+PH2\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_aa245ec72585cdee25b25d3e5d0d0f0e2}\label{main_8h_aa245ec72585cdee25b25d3e5d0d0f0e2} 
+\#define {\bfseries CODEUR2\+\_\+\+PH1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+6
+\item 
+\Hypertarget{main_8h_a535fa3e9db606eb1923f6a0632cb4972}\label{main_8h_a535fa3e9db606eb1923f6a0632cb4972} 
+\#define {\bfseries CODEUR2\+\_\+\+PH1\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a8e5b28658c98f4a1b8bec16fa5184e5d}\label{main_8h_a8e5b28658c98f4a1b8bec16fa5184e5d} 
+\#define {\bfseries CODEUR2\+\_\+\+PH2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+7
+\item 
+\Hypertarget{main_8h_a8380806f4b52211ab613a7e05a5df9d3}\label{main_8h_a8380806f4b52211ab613a7e05a5df9d3} 
+\#define {\bfseries CODEUR2\+\_\+\+PH2\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\item 
+\Hypertarget{main_8h_a586124d2402f5d3f4f61365555ae6087}\label{main_8h_a586124d2402f5d3f4f61365555ae6087} 
+\#define {\bfseries SPI1\+\_\+\+CS\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\Hypertarget{main_8h_ad2cec6eedba5acb3a3a4b97b8adfcb39}\label{main_8h_ad2cec6eedba5acb3a3a4b97b8adfcb39} 
+\#define {\bfseries SPI1\+\_\+\+CS\+\_\+\+GPIO\+\_\+\+Port}~GPIOA
+\item 
+\Hypertarget{main_8h_a15bcb1112410041b6d51e954d58d129b}\label{main_8h_a15bcb1112410041b6d51e954d58d129b} 
+\#define {\bfseries LED\+\_\+\+RED\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+0
+\item 
+\Hypertarget{main_8h_a8a4e80fa39d14daa8305680135261903}\label{main_8h_a8a4e80fa39d14daa8305680135261903} 
+\#define {\bfseries LED\+\_\+\+RED\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_a667e2c7eceb0421583385a06b976d025}\label{main_8h_a667e2c7eceb0421583385a06b976d025} 
+\#define {\bfseries LED\+\_\+\+YELLOW\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+1
+\item 
+\Hypertarget{main_8h_affcace2b5d616e9ed8fdbe7d642a1899}\label{main_8h_affcace2b5d616e9ed8fdbe7d642a1899} 
+\#define {\bfseries LED\+\_\+\+YELLOW\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_ac650ce893826222908a85c6caa5241f0}\label{main_8h_ac650ce893826222908a85c6caa5241f0} 
+\#define {\bfseries LED\+\_\+\+WHITE\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+2
+\item 
+\Hypertarget{main_8h_a2e2db91d964de1979b98ff506bc3f5b1}\label{main_8h_a2e2db91d964de1979b98ff506bc3f5b1} 
+\#define {\bfseries LED\+\_\+\+WHITE\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_a2777e34d6c560fb225af728be3807af6}\label{main_8h_a2777e34d6c560fb225af728be3807af6} 
+\#define {\bfseries LED\+\_\+\+BLUE\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\Hypertarget{main_8h_a1b7f79c0b489bbb678c75ed6735a6df7}\label{main_8h_a1b7f79c0b489bbb678c75ed6735a6df7} 
+\#define {\bfseries LED\+\_\+\+BLUE\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_aa0ae908d1e3952cd486ee20970cd4b6d}\label{main_8h_aa0ae908d1e3952cd486ee20970cd4b6d} 
+\#define {\bfseries LED\+\_\+\+GREEN\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\Hypertarget{main_8h_a274553bcc4193f1176d99f48de5059a1}\label{main_8h_a274553bcc4193f1176d99f48de5059a1} 
+\#define {\bfseries LED\+\_\+\+GREEN\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_a0ecd6af5a9dee4eba35f6624764a6978}\label{main_8h_a0ecd6af5a9dee4eba35f6624764a6978} 
+\#define {\bfseries Buzzer\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\Hypertarget{main_8h_a4387ca3b2685193fb7784b8c01ada638}\label{main_8h_a4387ca3b2685193fb7784b8c01ada638} 
+\#define {\bfseries Buzzer\+\_\+\+GPIO\+\_\+\+Port}~GPIOD
+\item 
+\Hypertarget{main_8h_a686760d157fc02d171a138a7d734038e}\label{main_8h_a686760d157fc02d171a138a7d734038e} 
+\#define {\bfseries DEV\+\_\+\+EN\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+3
+\item 
+\Hypertarget{main_8h_a7d038cd486e37fa7e41039ff74893938}\label{main_8h_a7d038cd486e37fa7e41039ff74893938} 
+\#define {\bfseries DEV\+\_\+\+EN\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a4577ddc5a25fd8c0a4bbcf6ead803cba}\label{main_8h_a4577ddc5a25fd8c0a4bbcf6ead803cba} 
+\#define {\bfseries M\+\_\+\+EN\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+4
+\item 
+\Hypertarget{main_8h_a6d0c5099e7449b25a15e79946c5d230d}\label{main_8h_a6d0c5099e7449b25a15e79946c5d230d} 
+\#define {\bfseries M\+\_\+\+EN\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a58ff2f729819107313d51d2c8a4fe660}\label{main_8h_a58ff2f729819107313d51d2c8a4fe660} 
+\#define {\bfseries Contact4\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+5
+\item 
+\Hypertarget{main_8h_a0b9c5c68722489ac2061fbfd37515a00}\label{main_8h_a0b9c5c68722489ac2061fbfd37515a00} 
+\#define {\bfseries Contact4\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_aa8e45bab51a8b16253a2100b0ef5d47e}\label{main_8h_aa8e45bab51a8b16253a2100b0ef5d47e} 
+\#define {\bfseries Contact4\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_a188b7a72881398cea1f88c8284604047}\label{main_8h_a188b7a72881398cea1f88c8284604047} 
+\#define {\bfseries Bordure1\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+8
+\item 
+\Hypertarget{main_8h_a76b2e7447e8a6a9902ee52d20f1121e9}\label{main_8h_a76b2e7447e8a6a9902ee52d20f1121e9} 
+\#define {\bfseries Bordure1\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a95e8308d5ed6a53a62863bef51879812}\label{main_8h_a95e8308d5ed6a53a62863bef51879812} 
+\#define {\bfseries Bordure1\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_a704261a6ca1d27c41e16a8b17155c62a}\label{main_8h_a704261a6ca1d27c41e16a8b17155c62a} 
+\#define {\bfseries Bordure2\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+9
+\item 
+\Hypertarget{main_8h_adb052a1428a4c017e7d9de5ec1a0bf54}\label{main_8h_adb052a1428a4c017e7d9de5ec1a0bf54} 
+\#define {\bfseries Bordure2\+\_\+\+GPIO\+\_\+\+Port}~GPIOB
+\item 
+\Hypertarget{main_8h_a36b8779dab0c3368fee2600cf06d0823}\label{main_8h_a36b8779dab0c3368fee2600cf06d0823} 
+\#define {\bfseries Bordure2\+\_\+\+EXTI\+\_\+\+IRQn}~EXTI4\+\_\+15\+\_\+\+IRQn
+\item 
+\Hypertarget{main_8h_adeda569ffa9f89990445277b49fe8e34}\label{main_8h_adeda569ffa9f89990445277b49fe8e34} 
+\#define {\bfseries USART4\+\_\+\+TX\+\_\+\+LIDAR\+\_\+\+Pin}~GPIO\+\_\+\+PIN\+\_\+10
+\item 
+\Hypertarget{main_8h_ac847fd8596ddfcc2352cc2566ef96cd8}\label{main_8h_ac847fd8596ddfcc2352cc2566ef96cd8} 
+\#define {\bfseries USART4\+\_\+\+TX\+\_\+\+LIDAR\+\_\+\+GPIO\+\_\+\+Port}~GPIOC
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for \doxylink{main_8c}{main.\+c} file. This file contains the common defines of the application. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2024 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8h_a1730ffe1e560465665eb47d9264826f9}\label{main_8h_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.h@{main.h}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

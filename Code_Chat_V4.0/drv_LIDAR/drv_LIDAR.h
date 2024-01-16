@@ -4,38 +4,51 @@
 #include <stdint.h>
 #include "math.h"
 
-#define INFO_BUFF_SIZE 27
-#define HEALTH_BUFF_SIZE 10
-#define CMD_BUFF_SIZE 2
-#define DATA_BUFF_SIZE 4000
-#define FRAME_BUFF_SIZE 90	//Au max on a 0x28=40 points par packet (80o) + le header (10o)
-#define POINT_BUFF_SIZE 360 //Les 360° autour du LIDAR
-#define NB_DEGRES 360
-#define CLUSTER_SEUIL 150
+/**
+ * @file drv_lidar.h
+ * @brief Définition des structures et des fonctions pour le driver du LIDAR.
+ * \author Tom CHARBONNEAU
+ */
 
+#define INFO_BUFF_SIZE 27 //! Taille du buffer d'infos
+#define HEALTH_BUFF_SIZE 10 //! Taille du buffer de santée
+#define CMD_BUFF_SIZE 2 //! Taille du buffer de commande
+#define DATA_BUFF_SIZE 4000 //! Taille du buffer recevant les trames en DMA
+#define FRAME_BUFF_SIZE 90	//! Taille du buffer des frames. Au max on a 0x28=40 points par packet (80o) + le header (10o)
+#define POINT_BUFF_SIZE 360 //! Taille du buffer stockant les 360° autour du LIDAR
+#define NB_DEGRES 360 //! Nombres de degrés dans un cercle
+#define CLUSTER_SEUIL 150 //! Nombre de cluster différents maximum autorisé
+
+/**
+ * @brief Enumération des commandes du LIDAR.
+ */
 typedef enum LIDAR_command_enum
 {
-	CMD_BEGIN   = 0xA5, //Premier octet de la commande
-	CMD_START   = 0x60, //Start scanning and export point cloud data
-	CMD_STOP    = 0x65, //Stop and stop scanning
-	CMD_INFO    = 0x90, //Get device information (model, firmware, hardware version)
-	CMD_HEALTH  = 0x91, //Get device health status
-	CMD_RESTART = 0x80  //Soft restart
+	CMD_BEGIN   = 0xA5, /**< Premier octet de la commande */
+	CMD_START   = 0x60, /**< Démarrer le balayage et exporter les données du nuage de points */
+	CMD_STOP    = 0x65, /**< Arrêter le balayage */
+	CMD_INFO    = 0x90, /**< Obtenir les informations sur le dispositif (modèle, firmware, version matérielle) */
+	CMD_HEALTH  = 0x91, /**< Obtenir l'état de santé du dispositif */
+	CMD_RESTART = 0x80  /**< Redémarrage logiciel */
 } LIDAR_command_t;
 
-//transmission en blockage
+/**
+ * @brief Fonctions de transmission pour le LIDAR.
+ */
 typedef int (* LIDAR_transmit_drv_t)(uint8_t *p_data, uint16_t size);
-//transmission en interruption
 typedef int (* LIDAR_it_transmit_drv_t)(uint8_t *p_data, uint16_t size);
-//transmission en DMA
 typedef int (* LIDAR_dma_transmit_drv_t)(uint8_t *p_data, uint16_t size);
-//réception en polling
+
+/**
+ * @brief Fonctions de réception pour le LIDAR.
+ */
 typedef int (* LIDAR_poll_receive_drv_t)(uint8_t *p_data, uint16_t size);
-//réception en interruption
 typedef int (* LIDAR_it_receive_drv_t)(uint8_t *p_data, uint16_t size);
-//réception en DMA
 typedef int (* LIDAR_DMA_receive_drv_t)(uint8_t *p_data, uint16_t size);
 
+/**
+ * @brief Structure décrivant le driver série du LIDAR.
+ */
 typedef struct LIDAR_serial_drv_struct
 {
 	LIDAR_transmit_drv_t transmit;
@@ -46,6 +59,10 @@ typedef struct LIDAR_serial_drv_struct
 	LIDAR_DMA_receive_drv_t dma_receive;
 } LIDAR_serial_drv_t;
 
+
+/**
+ * @brief Structure décrivant l'état du LIDAR.
+ */
 typedef struct LIDAR_health_stat_struct
 {
 	uint16_t start_sign;
@@ -56,6 +73,9 @@ typedef struct LIDAR_health_stat_struct
 	uint16_t error_code;
 }LIDAR_health_stat_t;
 
+/**
+ * @brief Structure décrivant les informations du LIDAR.
+ */
 typedef struct LIDAR_device_info_struct
 {
 	uint16_t start_sign;
@@ -68,13 +88,19 @@ typedef struct LIDAR_device_info_struct
 	char serial[17];
 }LIDAR_device_info_t;
 
-// Structure pour stocker les informations sur un cluster
+
+/**
+ * @brief Structure pour stocker les informations sur un cluster.
+ */
 typedef struct LIDAR_cluster_struct {
 	int angle_moyen;
 	int distance_moyenne;
 	int count; // Nombre de valeurs dans le cluster
 } LIDAR_cluster_t;
 
+/**
+ * @brief Structure pour le traitement des trames du LIDAR.
+ */
 typedef struct LIDAR_processing_struct
 {
 	//Header
@@ -139,13 +165,21 @@ typedef struct h_LIDAR_struct
 } h_LIDAR_t;
 
 int LIDAR_start(h_LIDAR_t * h_LIDAR);
+
 int LIDAR_stop(h_LIDAR_t * h_LIDAR);
+
 int LIDAR_get_info(h_LIDAR_t * h_LIDAR);
+
 int LIDAR_get_health_stat(h_LIDAR_t * h_LIDAR);
+
 int LIDAR_restart(h_LIDAR_t * h_LIDAR);
+
 void LIDAR_process_frame(h_LIDAR_t *LIDAR);
+
 int calculer_distance_moyenne(int distances[], int debut, int fin);
+
 void find_clusters(h_LIDAR_t * LIDAR);
+
 void medianFilter(h_LIDAR_t * LIDAR);
 
 #endif /* DRV_LIDAR_H_ */

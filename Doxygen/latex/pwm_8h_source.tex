@@ -1,0 +1,58 @@
+\doxysection{pwm.\+h}
+\hypertarget{pwm_8h_source}{}\label{pwm_8h_source}\index{Code\_Chat\_V4.0/drv\_Motor/pwm.h@{Code\_Chat\_V4.0/drv\_Motor/pwm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ pwm.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Nov\ 30,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ serva}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DRV\_MOTOR\_PWM\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DRV\_MOTOR\_PWM\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tim_8h}{tim.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{gpio_8h}{gpio.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ alpha\_MAX\ 999}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ alpha\_min\ 100}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ SENS\_MOTOR\_1\ 1}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SENS\_MOTOR\_2\ 2}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ int\ (*pwm\_start\_drv)(TIM\_HandleTypeDef\ htim,\ \textcolor{keywordtype}{int}\ Channel);}
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ int\ (*pwm\_stop\_drv)(TIM\_HandleTypeDef\ htim,\ \textcolor{keywordtype}{int}\ Channel);}
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ int\ (*set\_alpha\_drv)(TIM\_HandleTypeDef\ htim,\ \textcolor{keywordtype}{int}\ Channel);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ Channel\_Forward;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ Channel\_Backward;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ sens;\ \ \ \textcolor{comment}{//il\ faut\ inverser\ les\ sens\ pour\ bouger\ de\ façons\ rectiligne}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ alpha;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ old\_alpha;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{float}\ vitesse;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ position;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ old\_position;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ old\_sens;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ TIM\_HandleTypeDef\ Timer\_Forward,Timer\_Backward;}
+\DoxyCodeLine{00036\ \ \ \ \ pwm\_start\_drv\ pwm\_start;}
+\DoxyCodeLine{00037\ \ \ \ \ pwm\_stop\_drv\ pwm\_stop;}
+\DoxyCodeLine{00038\ \ \ \ \ void\ (*update)(\textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}});}
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ pwm\_start(TIM\_HandleTypeDef\ htim,\ \textcolor{keywordtype}{int}\ Channel);}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ pwm\_stop(TIM\_HandleTypeDef\ htim,\ \textcolor{keywordtype}{int}\ Channel);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ update\_motor(\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ pwm\_start\_test(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ pwm\_stop\_test(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ set\_pwm\_alpha(\textcolor{keywordtype}{int}\ alpha);}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ motor\_Init(\textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}}\ *moteur1,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{struct_motor__drv__struct}{Motor\_drv\_struct}}\ *moteur2);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DRV\_MOTOR\_PWM\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

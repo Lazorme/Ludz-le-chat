@@ -1,0 +1,32 @@
+\doxysection{sensor.\+h}
+\hypertarget{sensor_8h_source}{}\label{sensor_8h_source}\index{Code\_Chat\_V4.0/drv\_Motor/sensor.h@{Code\_Chat\_V4.0/drv\_Motor/sensor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ sensor.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Nov\ 30,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ servan,\ gilles}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DRV\_MOTOR\_ENCODER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DRV\_MOTOR\_ENCODER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tim_8h}{tim.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_____codeur___handle_typedef}{\_\_Codeur\_HandleTypedef}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ TIM\_HandleTypeDef\ *htimEncodeur;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ frequency;}
+\DoxyCodeLine{00017\ \}\mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\_HandleTypeDef}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\_HandleTypeDef}}\ \mbox{\hyperlink{main_8c_ae7082775a5cf9348f1895d9c37277f43}{hCodeurLeft}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\_HandleTypeDef}}\ \mbox{\hyperlink{main_8c_a11766f4782aee783c97a3f9fb0f46289}{hCodeurRight}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ codeur\_init(\mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\_HandleTypeDef}}\ *hcodeur,\ TIM\_HandleTypeDef\ *htimEncodeur,\ \textcolor{keywordtype}{int}\ frequency);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ Get\_speed(\mbox{\hyperlink{struct_____codeur___handle_typedef}{Codeur\_HandleTypeDef}}\ *hcodeur);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DRV\_MOTOR\_ENCODER\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00026\ }
+
+\end{DoxyCode}

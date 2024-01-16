@@ -1,0 +1,163 @@
+\doxysection{drv\+\_\+\+LIDAR.\+h}
+\hypertarget{drv___l_i_d_a_r_8h_source}{}\label{drv___l_i_d_a_r_8h_source}\index{Code\_Chat\_V4.0/drv\_LIDAR/drv\_LIDAR.h@{Code\_Chat\_V4.0/drv\_LIDAR/drv\_LIDAR.h}}
+\mbox{\hyperlink{drv___l_i_d_a_r_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DRV\_LIDAR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DRV\_LIDAR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}math.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INFO\_BUFF\_SIZE\ 27\ }}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ HEALTH\_BUFF\_SIZE\ 10\ }}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ CMD\_BUFF\_SIZE\ 2\ }}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ DATA\_BUFF\_SIZE\ 4000\ }}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ FRAME\_BUFF\_SIZE\ 90\ \ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ POINT\_BUFF\_SIZE\ 360\ }}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ NB\_DEGRES\ 360\ }}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ CLUSTER\_SEUIL\ 150\ }}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95c}{LIDAR\_command\_enum}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca0b1882463452a9b63bc4403123dbda2a}{CMD\_BEGIN}}\ \ \ =\ 0xA5,\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95caf2e188a52388c10d5e2f48ca37b28287}{CMD\_START}}\ \ \ =\ 0x60,\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca1e0ceff2d6f13742786f42dac58149bc}{CMD\_STOP}}\ \ \ \ =\ 0x65,\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6b1ac29fd084fc49f7c5c5e80130614b}{CMD\_INFO}}\ \ \ \ =\ 0x90,\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca6269e4a5a89a4d74bbf165cfe5d9676a}{CMD\_HEALTH}}\ \ =\ 0x91,\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ac43b56f45e59545582832ccebf4cc95ca77722fde3ff0433651c0b36f3211d258}{CMD\_RESTART}}\ =\ 0x80\ \ }
+\DoxyCodeLine{00033\ \}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a231540ba1b10424f75fb0a8329acd411}{LIDAR\_command\_t}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ int\ (*\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a43cbada6790558c0337e0d7c2d1a38d5}{LIDAR\_transmit\_drv\_t}})(uint8\_t\ *p\_data,\ uint16\_t\ size);}
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ int\ (*\ LIDAR\_it\_transmit\_drv\_t)(uint8\_t\ *p\_data,\ uint16\_t\ size);}
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ int\ (*\ LIDAR\_dma\_transmit\_drv\_t)(uint8\_t\ *p\_data,\ uint16\_t\ size);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ int\ (*\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a8d0b3f4d1cd16ccaaa337739e9f73844}{LIDAR\_poll\_receive\_drv\_t}})(uint8\_t\ *p\_data,\ uint16\_t\ size);}
+\DoxyCodeLine{00046\ \textcolor{keyword}{typedef}\ int\ (*\ LIDAR\_it\_receive\_drv\_t)(uint8\_t\ *p\_data,\ uint16\_t\ size);}
+\DoxyCodeLine{00047\ \textcolor{keyword}{typedef}\ int\ (*\ LIDAR\_DMA\_receive\_drv\_t)(uint8\_t\ *p\_data,\ uint16\_t\ size);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_l_i_d_a_r__serial__drv__struct}{LIDAR\_serial\_drv\_struct}}}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a43cbada6790558c0337e0d7c2d1a38d5}{LIDAR\_transmit\_drv\_t}}\ transmit;}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a43cbada6790558c0337e0d7c2d1a38d5}{LIDAR\_transmit\_drv\_t}}\ it\_transmit;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a43cbada6790558c0337e0d7c2d1a38d5}{LIDAR\_transmit\_drv\_t}}\ dma\_transmit;}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a8d0b3f4d1cd16ccaaa337739e9f73844}{LIDAR\_poll\_receive\_drv\_t}}\ poll\_receive;}
+\DoxyCodeLine{00058\ \ \ \ \ LIDAR\_it\_receive\_drv\_t\ it\_receive;}
+\DoxyCodeLine{00059\ \ \ \ \ LIDAR\_DMA\_receive\_drv\_t\ dma\_receive;}
+\DoxyCodeLine{00060\ \}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a5c6e67276e02cb691fe822a06c0910ba}{LIDAR\_serial\_drv\_t}};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_l_i_d_a_r__health__stat__struct}{LIDAR\_health\_stat\_struct}}}
+\DoxyCodeLine{00067\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ uint16\_t\ start\_sign;}
+\DoxyCodeLine{00069\ \ \ \ \ uint32\_t\ lenght;}
+\DoxyCodeLine{00070\ \ \ \ \ uint8\_t\ mode;}
+\DoxyCodeLine{00071\ \ \ \ \ uint8\_t\ type\_code;}
+\DoxyCodeLine{00072\ \ \ \ \ uint8\_t\ status\_code;}
+\DoxyCodeLine{00073\ \ \ \ \ uint16\_t\ error\_code;}
+\DoxyCodeLine{00074\ \}\mbox{\hyperlink{drv___l_i_d_a_r_8h_ac5ebb7d25e5b9f75517586be1f52944c}{LIDAR\_health\_stat\_t}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_l_i_d_a_r__device__info__struct}{LIDAR\_device\_info\_struct}}}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ uint16\_t\ start\_sign;}
+\DoxyCodeLine{00082\ \ \ \ \ uint32\_t\ lenght;}
+\DoxyCodeLine{00083\ \ \ \ \ uint8\_t\ mode;}
+\DoxyCodeLine{00084\ \ \ \ \ uint8\_t\ type\_code;}
+\DoxyCodeLine{00085\ \ \ \ \ uint8\_t\ model;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{char}\ firmware[6];}
+\DoxyCodeLine{00087\ \ \ \ \ uint8\_t\ hardware;}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{char}\ serial[17];}
+\DoxyCodeLine{00089\ \}\mbox{\hyperlink{drv___l_i_d_a_r_8h_a3c1297b378c95898b6311cf17c7f23cc}{LIDAR\_device\_info\_t}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_l_i_d_a_r__cluster__struct}{LIDAR\_cluster\_struct}}\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ angle\_moyen;}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{int}\ distance\_moyenne;}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ count;\ \textcolor{comment}{//\ Nombre\ de\ valeurs\ dans\ le\ cluster}}
+\DoxyCodeLine{00099\ \}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a8adbf2acb66573922abd6da94533ec7e}{LIDAR\_cluster\_t}};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_l_i_d_a_r__processing__struct}{LIDAR\_processing\_struct}}}
+\DoxyCodeLine{00105\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//Header}}
+\DoxyCodeLine{00107\ \ \ \ \ uint16\_t\ PH;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//CT\ Package\ Type\ /\ fréquence}}
+\DoxyCodeLine{00110\ \ \ \ \ uint8\_t\ CT;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//LSN\ nombre\ de\ points\ de\ la\ trame}}
+\DoxyCodeLine{00113\ \ \ \ \ uint8\_t\ LSN;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{//FSA\ Start\ Angle}}
+\DoxyCodeLine{00116\ \ \ \ \ uint16\_t\ FSA;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//LSA\ End\ Angle}}
+\DoxyCodeLine{00119\ \ \ \ \ uint16\_t\ LSA;}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{comment}{//CS\ Check\ Code}}
+\DoxyCodeLine{00122\ \ \ \ \ uint16\_t\ CS;}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{//Frame\ index}}
+\DoxyCodeLine{00125\ \ \ \ \ uint8\_t\ idx;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{comment}{//Buffer\ contenant\ les\ trames\ reçu\ en\ DMA}}
+\DoxyCodeLine{00128\ \ \ \ \ uint8\_t\ receive\_buff[DATA\_BUFF\_SIZE];}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//Buffer\ contenant\ une\ frame}}
+\DoxyCodeLine{00131\ \ \ \ \ uint8\_t\ frame\_buff[FRAME\_BUFF\_SIZE];}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//Buffer\ contenant\ les\ points}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ point\_buff[POINT\_BUFF\_SIZE];}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//Buffer\ discret}}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{int}\ filtred\_buff[POINT\_BUFF\_SIZE];}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//Buffer\ cluster}}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{struct_l_i_d_a_r__cluster__struct}{LIDAR\_cluster\_t}}\ clusters[100];\ \textcolor{comment}{//Je\ limite\ pas\ le\ fait\ qu'il\ puisse\ y\ avoir\ plus\ de\ 50\ clusters\ ça\ peut\ pauser\ problème}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keywordtype}{int}\ cluster\_cnt;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Maintenant\ si}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \}\mbox{\hyperlink{drv___l_i_d_a_r_8h_a4045b1a41b654a144848b7d3977e00bc}{LIDAR\_processing\_t}};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_struct}}}
+\DoxyCodeLine{00146\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{//driver\ UART}}
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{struct_l_i_d_a_r__serial__drv__struct}{LIDAR\_serial\_drv\_t}}\ serial\_drv;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{comment}{//health\ status}}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{struct_l_i_d_a_r__health__stat__struct}{LIDAR\_health\_stat\_t}}\ health\_stat;}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{comment}{//device\ info}}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{struct_l_i_d_a_r__device__info__struct}{LIDAR\_device\_info\_t}}\ device\_info;}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{comment}{//variables\ propres\ au\ lidar}}
+\DoxyCodeLine{00157\ \ \ \ \ uint8\_t\ info\_buff[INFO\_BUFF\_SIZE];}
+\DoxyCodeLine{00158\ \ \ \ \ uint8\_t\ health\_buff[HEALTH\_BUFF\_SIZE];}
+\DoxyCodeLine{00159\ \ \ \ \ uint8\_t\ data\_buff[DATA\_BUFF\_SIZE];}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{comment}{//Traitement\ des\ trames}}
+\DoxyCodeLine{00162\ \ \ \ \ \mbox{\hyperlink{struct_l_i_d_a_r__processing__struct}{LIDAR\_processing\_t}}\ processing;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00165\ \}\ \mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a89c0491fa4d18856da831a9e76376a4b}{LIDAR\_start}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ \mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\_LIDAR}});}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a3a25b63d51d2dc067788becd442d176d}{LIDAR\_stop}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ \mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\_LIDAR}});}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a12c270b3c8cdd54a50881e41b0dfe08c}{LIDAR\_get\_info}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ \mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\_LIDAR}});}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a248eba1785fdbb749cd1eced7ceaf879}{LIDAR\_get\_health\_stat}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ \mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\_LIDAR}});}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_ae2c51600134ab57bf9a0c802b9597cc1}{LIDAR\_restart}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ \mbox{\hyperlink{main_8c_a60ee8df93c4a8f47c80e506af7aae60b}{h\_LIDAR}});}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a8f50f9a984d9c6f9efb72074dac2056b}{LIDAR\_process\_frame}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *LIDAR);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_af1eecdf680e4f9c453a7486728fa95b1}{calculer\_distance\_moyenne}}(\textcolor{keywordtype}{int}\ distances[],\ \textcolor{keywordtype}{int}\ debut,\ \textcolor{keywordtype}{int}\ fin);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a5583ed54b0d32192cb5e8c2d30b28f24}{find\_clusters}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ LIDAR);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{drv___l_i_d_a_r_8h_a254756fa90345b5f99cd399c0563319f}{medianFilter}}(\mbox{\hyperlink{structh___l_i_d_a_r__struct}{h\_LIDAR\_t}}\ *\ LIDAR);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ DRV\_LIDAR\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ }
+
+\end{DoxyCode}
