@@ -1,6 +1,10 @@
-# KittyLudzinator Project 
+# KittyLudzinator Project
 
-This project aims to create and programm a PCB, in  order to build a robot equipped with various sensors such as an IMU, a Lidar, or motion sensors. This robot's objective is to be able to play TAG against others cat robots. When one robot is touched, it becomes the cat and must chase the other robots. To accomplish this, one of the key goals is to develop a complex algorithm capable of understanding its environment, determining its location, and effectively interacting with other robots, either by tagging them or evading them when it's not the cat.
+![PCB](image/PCB1.png)
+![Robot](image/Robot.jpg)
+
+## Project Overview
+The KittyLudzinator Project is focused on developing a playful autonomous robot equipped with an array of sensors including IMUs, Lidar, and motion detectors. It engages in a game of TAG, showcasing its ability to navigate and interact within its environment.
 
 CHARBONENAU TOM
 
@@ -8,49 +12,70 @@ SERVAN Antoine
 
 GILLES Baptiste
 
-## Aperçu
-![PCB](Doc/image/PCB1.png)
-![Robot](Doc/image/Robot.jpg)
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Robot Strategy](#robot-strategy)
+- [Doxygen](#Doxygen)
+- [IMU](#IMU)
+- [Directory Structure](#directory-structure)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact Information](#contact-information)
+
+## Installation
+Refer to the [PCB](/PCB) directory for detailed component tables , PCB info and setup documentation. The software setup is managed through STM32CubeMX configurations (`Ludz_le_chat.ioc`), 
+
+## Usage
+The source code is located in [Code_Chat_V4.0](/Code_Chat_V4.0) with core functions in [Core](/Code_Chat_V4.0/Core).
+
+The Lidar and motor drivers are in [drv_LIDAR](/Code_Chat_V4.0/drv_LIDAR) and [drv_Motor](/Code_Chat_V4.0/drv_Motor), respectively.
+
+## Robot Strategy
+Strategies for robot behavior in different modes are implemented as follows:
+
+### Lidar Processing
+Processes Lidar sensor data to track objects. Details are in the script [LIDAR_Receive_clusters.py](/LIDAR_Receive_clusters.py).
+
+![mouse](image/lidar_processing.png)
+
+### Mouse Mode
+The robot moves away from the tagger, inversely proportional to the angle of the tagger's approach.
+
+![mouse](image/mouser.png)
+
+### Hunter Mode
+The 'it' robot aggressively seeks the nearest robot, adjusting its motor speed using a linear function.
+
+![PCB](image/hunter.png)
+
+
+### Edge Sensor
+Edge detection prevents the robot from falling off ledges.
+
+![edge](image/edge.png)
+
 
 ## Doxygen
 ![Doxygen](Doxygen/html/index.html)
 
-## Contenu du Répertoire
+## IMU
+[IIMU](<Autres Codes/Code_IIM2070_SPI>) :This file includes instructions for operating the IIM2070 device, as detailed in the script code 'IIM2070_SPI
 
-Le projet est organisé de la manière suivante :
+## Directory Structure
+- [Code_Chat_V4.0](/Code_Chat_V4.0): Active robot code.
+- [PCB](/PCB): Documentation, components and manufacturing file for PCB.
+- [Doxygen](/Doxygen): Generated code documentation.
+- [Autres Codes](/Autres_Codes): Previous versions and experimental code.
 
-- **/Code_Chat_V4.0** : Contient le programme du robot.
-- **/Autres Codes** : Contient d'autres versions du programme ainsi que le driver du LIDAR.
-- **/Doxygen** : Contient les fichiers du Doxygen.
-- **/Doc/Testmoteur** : Contient les fichiers de conception KiCad de la carte test afin de choisir le meilleur capteur de courant.
-- **/Kyttiludzinator** : Contient les fichiers de conception KiCad, y compris le schéma, le PCB et les bibliothèques personnalisées.
-- **/Doc/Image** : Images et captures d'écran pour la documentation.
-- **/Doc/Composants** : Pour tout autre fichier pertinent, par exemple, des modèles 3D, les empreintes des composants ect 
+## License
+The project is under the MIT License.
 
-## Logiciel Requis
+## Acknowledgments
+Thanks to contributors and the open-source community.
 
-- KiCad 5.0 ou supérieur : Un outil de conception électronique open-source. [Télécharger KiCad](https://kicad-pcb.org/download/)
-- CubeIDE
-- Python
-## How to use ?
-1. Components
-
-In [Components_Table.cvs](Doc/Components_Table.cvs) you can find all the components uses in this project
-
-2. Kicad
-
-Launch [Kittyludzinator](Doc/Kyttiludzinator/Kyttiludzinator.kicad_pro) to open the project with KICAD
-
-3. Ouput file
-
-Launch [Kittyludzinator](Doc/Kyttiludzinator/Kyttiludzinator.kicad_pro) to see the gerbers files
-
-4. Open the project file in CubeIDE and upload the code on the robot using an STLink
-
-5. Launch the Python program to observe the cluster's positions.
-
-
-
-
-
+## Contact Information
+Contact the maintainer at .
+[tom.charbonneau2001@gmail.com](mailto:tom.charbonneau2001@gmail.com) | [baptiste.gilles01@gmail.com](mailto:baptiste.gilles01@gmail.com)   |  [servan.antoine@gmail.com](mailto:servan.antoine@gmail.com)
 

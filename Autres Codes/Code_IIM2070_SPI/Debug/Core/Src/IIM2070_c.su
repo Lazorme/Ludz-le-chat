@@ -1,0 +1,4 @@
+../Core/Src/IIM2070_c.c:24:9:calculateCRC	40	static
+../Core/Src/IIM2070_c.c:45:5:IIM2070_init	56	static
+../Core/Src/IIM2070_c.c:86:5:IIM2070_Read_Gyro	72	static
+../Core/Src/IIM2070_c.c:134:5:IIM2070_Read_Accel	80	static
